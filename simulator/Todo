@@ -1,0 +1,5 @@
+Replace 'EPU' by something e.g. 'EPU' (Evc per UNI)  -- DONE, 2010-08-07
+Fix all '// private'
+show mactable
+Remove method name debug statements
+Destructor: assert on pointers instead of if

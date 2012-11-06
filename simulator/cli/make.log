@@ -1,0 +1,1221 @@
+//
+// Copyright 2009 Arun Saha
+//
+cd ./common &&  make all
+make[1]: Entering directory `/private/arun/fnc/asaha-work/simulator/cli/common'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/private/arun/fnc/asaha-work/simulator/cli/common'
+cd ./main ; make all
+make[1]: Entering directory `/private/arun/fnc/asaha-work/simulator/cli/main'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/private/arun/fnc/asaha-work/simulator/cli/main'
+cd ./global ; make all
+make[1]: Entering directory `/private/arun/fnc/asaha-work/simulator/cli/global'
+g++ -Wall -Werror -g  -I/usr/include -I/usr/include/boost-1_33_1 -I. -I../.. -c GlobalParser.cpp -o GlobalParser.o
+In file included from /usr/include/boost/spirit/core.hpp:17,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/version.hpp:17:29: error: boost/version.hpp: No such file or directory
+/usr/include/boost/spirit/version.hpp:20:2: error: #error "Spirit v1.8.x needs at least Boost V1.32.0 to compile successfully."
+In file included from /usr/include/boost/spirit/core.hpp:27,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/config.hpp:12:28: error: boost/config.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core.hpp:29,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/match.hpp:14:33: error: boost/call_traits.hpp: No such file or directory
+/usr/include/boost/spirit/core/match.hpp:15:30: error: boost/optional.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core/match.hpp:16,
+                 from /usr/include/boost/spirit/core.hpp:29,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/assert.hpp:14:37: error: boost/throw_exception.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core/match.hpp:17,
+                 from /usr/include/boost/spirit/core.hpp:29,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/safe_bool.hpp:13:39: error: boost/detail/workaround.hpp: No such file or directory
+/usr/include/boost/spirit/core/safe_bool.hpp:25:21: error: missing binary operator before token "("
+In file included from /usr/include/boost/spirit/core/match.hpp:18,
+                 from /usr/include/boost/spirit/core.hpp:29,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:13:30: error: boost/mpl/bool.hpp: No such file or directory
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:14:28: error: boost/mpl/or.hpp: No such file or directory
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:15:48: error: boost/type_traits/is_convertible.hpp: No such file or directory
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:16:41: error: boost/type_traits/is_same.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core.hpp:29,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/match.hpp:19:43: error: boost/type_traits/add_const.hpp: No such file or directory
+/usr/include/boost/spirit/core/match.hpp:20:46: error: boost/type_traits/is_reference.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core.hpp:30,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/parser.hpp:13:33: error: boost/type_traits.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core/parser.hpp:14,
+                 from /usr/include/boost/spirit/core.hpp:30,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/scanner/scanner.hpp:16:75: error: boost/detail/iterator.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core.hpp:33,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/primitives/primitives.hpp:13:25: error: boost/ref.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core/composite/directives.hpp:19,
+                 from /usr/include/boost/spirit/core/primitives/numerics.hpp:15,
+                 from /usr/include/boost/spirit/core.hpp:34,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/composite/composite.hpp:13:37: error: boost/compressed_pair.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core.hpp:41,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/non_terminal/subrule.hpp:14:35: error: boost/static_assert.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core.hpp:42,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/non_terminal/rule.hpp:32:32: error: boost/scoped_ptr.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core/non_terminal/rule.hpp:33,
+                 from /usr/include/boost/spirit/core.hpp:42,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/non_terminal/impl/rule.ipp:26:53: error: boost/type_traits/is_base_and_derived.hpp: No such file or directory
+/usr/include/boost/spirit/core/non_terminal/impl/rule.ipp:115:24: error: missing binary operator before token "("
+In file included from /usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp:15,
+                 from /usr/include/boost/spirit/core/non_terminal/grammar.hpp:21,
+                 from /usr/include/boost/spirit/core.hpp:43,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/non_terminal/impl/object_with_id.ipp:14:32: error: boost/shared_ptr.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core/non_terminal/grammar.hpp:21,
+                 from /usr/include/boost/spirit/core.hpp:43,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp:19:30: error: boost/weak_ptr.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core.hpp:49,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/composite/epsilon.hpp:62:21: error: missing binary operator before token "("
+In file included from /usr/include/boost/spirit/meta/fundamental.hpp:12,
+                 from /usr/include/boost/spirit/meta.hpp:21,
+                 from /usr/include/boost/spirit.hpp:35,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/meta/impl/fundamental.ipp:12:29: error: boost/mpl/int.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/iterator.hpp:21,
+                 from /usr/include/boost/spirit.hpp:49,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/iterator/file_iterator.hpp:55:39: error: boost/iterator_adaptors.hpp: No such file or directory
+/usr/include/boost/spirit/iterator/file_iterator.hpp:110:2: error: #error "Please use at least Boost V1.31.0 while compiling the file_iterator class!"
+In file included from /usr/include/boost/spirit/iterator.hpp:22,
+                 from /usr/include/boost/spirit.hpp:49,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:35:2: error: #error "Please use at least Boost V1.31.0 while compiling the fixed_size_queue class!"
+In file included from /usr/include/boost/spirit/iterator.hpp:23,
+                 from /usr/include/boost/spirit.hpp:49,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/iterator/position_iterator.hpp:16:35: error: boost/concept_check.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/iterator/position_iterator.hpp:94,
+                 from /usr/include/boost/spirit/iterator.hpp:23,
+                 from /usr/include/boost/spirit.hpp:49,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/iterator/impl/position_iterator.ipp:17:28: error: boost/mpl/if.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/iterator.hpp:23,
+                 from /usr/include/boost/spirit.hpp:49,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/iterator/position_iterator.hpp:131:2: error: #error "Please use at least Boost V1.31.0 while compiling the position_iterator class!"
+In file included from /usr/include/boost/spirit/iterator.hpp:24,
+                 from /usr/include/boost/spirit.hpp:49,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/iterator/multi_pass.hpp:19:28: error: boost/limits.hpp: No such file or directory
+/usr/include/boost/spirit/iterator/multi_pass.hpp:20:30: error: boost/iterator.hpp: No such file or directory
+/usr/include/boost/spirit/iterator/multi_pass.hpp:819:21: error: missing binary operator before token "("
+/usr/include/boost/spirit/iterator/multi_pass.hpp:880:21: error: missing binary operator before token "("
+/usr/include/boost/spirit/iterator/multi_pass.hpp:1253:21: error: missing binary operator before token "("
+In file included from /usr/include/boost/spirit/symbols/symbols.hpp:224,
+                 from /usr/include/boost/spirit/symbols.hpp:20,
+                 from /usr/include/boost/spirit.hpp:56,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/symbols/impl/symbols.ipp:44:22: error: missing binary operator before token "("
+In file included from /usr/include/boost/spirit/utility/chset_operators.hpp:398,
+                 from /usr/include/boost/spirit/utility/chset.hpp:183,
+                 from /usr/include/boost/spirit/utility/chset_operators.hpp:14,
+                 from /usr/include/boost/spirit/utility/chset.hpp:183,
+                 from /usr/include/boost/spirit/utility/impl/chset.ipp:15,
+                 from /usr/include/boost/spirit/utility/chset.hpp:182,
+                 from /usr/include/boost/spirit/utility.hpp:27,
+                 from /usr/include/boost/spirit.hpp:63,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:286:21: error: missing binary operator before token "("
+In file included from /usr/include/boost/spirit/utility/chset.hpp:182,
+                 from /usr/include/boost/spirit/utility.hpp:27,
+                 from /usr/include/boost/spirit.hpp:63,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/utility/impl/chset.ipp:74:21: error: missing binary operator before token "("
+/usr/include/boost/spirit/utility/impl/chset.ipp:143:22: error: missing binary operator before token "("
+/usr/include/boost/spirit/utility/impl/chset.ipp:219:22: error: missing binary operator before token "("
+/usr/include/boost/spirit/utility/impl/chset.ipp:249:22: error: missing binary operator before token "("
+In file included from /usr/include/boost/spirit/attribute/closure_fwd.hpp:12,
+                 from /usr/include/boost/spirit/attribute/closure.hpp:19,
+                 from /usr/include/boost/spirit/attribute.hpp:36,
+                 from /usr/include/boost/spirit.hpp:70,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/phoenix/tuples.hpp:62:50: error: boost/type_traits/remove_reference.hpp: No such file or directory
+In file included from /usr/include/boost/spirit/core/match.hpp:18,
+                 from /usr/include/boost/spirit/core.hpp:29,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:24: error: ‘optional’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:24: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:30: error: ‘optional’ is not a member of ‘boost’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:30: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:30: error: ‘dest’ was not declared in this scope
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:30: error: expected primary-expression before ‘const’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:30: error: ‘mpl’ has not been declared
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:30: error: variable or field ‘convert’ declared void
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:38: error: ‘optional’ is not a member of ‘boost’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:38: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:38: error: ‘dest’ was not declared in this scope
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:38: error: expected primary-expression before ‘const’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:38: error: ‘mpl’ has not been declared
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:38: error: variable or field ‘convert’ declared void
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:44: error: ‘boost::optional’ has not been declared
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:44: error: expected ‘,’ or ‘...’ before ‘<’ token
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:51: error: ‘optional’ is not a member of ‘boost’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:51: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:51: error: ‘dest’ was not declared in this scope
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:51: error: expected primary-expression before ‘const’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:51: error: variable or field ‘convert’ declared void
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:58: error: ‘optional’ is not a member of ‘boost’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:58: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:58: error: ‘dest’ was not declared in this scope
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:58: error: expected primary-expression before ‘const’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:58: error: variable or field ‘copy’ declared void
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:66: error: ‘optional’ is not a member of ‘boost’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:66: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:66: error: ‘dest’ was not declared in this scope
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:66: error: expected primary-expression before ‘const’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:66: error: variable or field ‘assign’ declared void
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:77: error: ‘optional’ is not a member of ‘boost’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:77: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:77: error: ‘dest’ was not declared in this scope
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:77: error: expected primary-expression before ‘const’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:77: error: ‘mpl’ has not been declared
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:77: error: variable or field ‘set_value’ declared void
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:85: error: ‘optional’ is not a member of ‘boost’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:85: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:85: error: ‘dest’ was not declared in this scope
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:85: error: expected primary-expression before ‘const’
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:85: error: ‘mpl’ has not been declared
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:85: error: variable or field ‘set_value’ declared void
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp: In static member function ‘static void boost::spirit::impl::match_attr_traits<T>::convert(int)’:
+/usr/include/boost/spirit/core/impl/match_attr_traits.ipp:46: error: ‘dest’ was not declared in this scope
+In file included from /usr/include/boost/spirit/core.hpp:29,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/match.hpp: At global scope:
+/usr/include/boost/spirit/core/match.hpp:66: error: ‘optional’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/core/match.hpp:66: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/core/match.hpp:67: error: ‘optional_type’ has not been declared
+/usr/include/boost/spirit/core/match.hpp:68: error: ‘optional_type’ has not been declared
+/usr/include/boost/spirit/core/match.hpp:120: error: ‘optional_type’ does not name a type
+/usr/include/boost/spirit/core/match.hpp: In constructor ‘boost::spirit::match<T>::match(const boost::spirit::match<T2>&)’:
+/usr/include/boost/spirit/core/match.hpp:83: error: class ‘boost::spirit::match<T>’ does not have any field named ‘val’
+/usr/include/boost/spirit/core/match.hpp:85: error: ‘val’ was not declared in this scope
+/usr/include/boost/spirit/core/match.hpp: In member function ‘boost::spirit::match<T>& boost::spirit::match<T>::operator=(const boost::spirit::match<T2>&)’:
+/usr/include/boost/spirit/core/match.hpp:92: error: ‘val’ was not declared in this scope
+/usr/include/boost/spirit/core/match.hpp: In member function ‘void boost::spirit::match<T>::value(const ValueT&)’:
+/usr/include/boost/spirit/core/match.hpp:109: error: ‘val’ was not declared in this scope
+/usr/include/boost/spirit/core/match.hpp:109: error: ‘is_reference’ was not declared in this scope
+/usr/include/boost/spirit/core/match.hpp:109: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/core/match.hpp:109: error: expected primary-expression before ‘)’ token
+In file included from /usr/include/boost/spirit/core/match.hpp:180,
+                 from /usr/include/boost/spirit/core.hpp:29,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/impl/match.ipp: In constructor ‘boost::spirit::match<T>::match()’:
+/usr/include/boost/spirit/core/impl/match.ipp:17: error: class ‘boost::spirit::match<T>’ does not have any field named ‘val’
+/usr/include/boost/spirit/core/impl/match.ipp: In constructor ‘boost::spirit::match<T>::match(size_t)’:
+/usr/include/boost/spirit/core/impl/match.ipp:21: error: class ‘boost::spirit::match<T>’ does not have any field named ‘val’
+/usr/include/boost/spirit/core/impl/match.ipp: In constructor ‘boost::spirit::match<T>::match(size_t, int)’:
+/usr/include/boost/spirit/core/impl/match.ipp:25: error: class ‘boost::spirit::match<T>’ does not have any field named ‘val’
+/usr/include/boost/spirit/core/impl/match.ipp: In member function ‘bool boost::spirit::match<T>::has_valid_attribute() const’:
+/usr/include/boost/spirit/core/impl/match.ipp:45: error: ‘val’ was not declared in this scope
+/usr/include/boost/spirit/core/impl/match.ipp: In member function ‘int boost::spirit::match<T>::value() const’:
+/usr/include/boost/spirit/core/impl/match.ipp:52: error: ‘val’ was not declared in this scope
+/usr/include/boost/spirit/core/impl/match.ipp: In member function ‘void boost::spirit::match<T>::swap(boost::spirit::match<T>&)’:
+/usr/include/boost/spirit/core/impl/match.ipp:61: error: ‘val’ was not declared in this scope
+In file included from /usr/include/boost/spirit/core/parser.hpp:14,
+                 from /usr/include/boost/spirit/core.hpp:30,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/scanner/scanner.hpp: At global scope:
+/usr/include/boost/spirit/core/scanner/scanner.hpp:220: error: ‘boost::detail’ has not been declared
+/usr/include/boost/spirit/core/scanner/scanner.hpp:221: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/core/scanner/scanner.hpp:222: error: ‘boost::detail’ has not been declared
+/usr/include/boost/spirit/core/scanner/scanner.hpp:223: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/core/scanner/scanner.hpp:225: error: ‘call_traits’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/core/scanner/scanner.hpp:225: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/core/scanner/scanner.hpp:229: error: ‘iter_param_t’ has not been declared
+/usr/include/boost/spirit/core/scanner/scanner.hpp:250: error: expected ‘;’ before ‘operator’
+/usr/include/boost/spirit/core/scanner/scanner.hpp:256: error: expected `;' before ‘scanner’
+In file included from /usr/include/boost/spirit/core.hpp:30,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/parser.hpp:60: error: ‘remove_reference’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/core/parser.hpp:60: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/core/parser.hpp:61: error: ‘parser_type’ has not been declared
+/usr/include/boost/spirit/core/parser.hpp:61: error: expected template-name before ‘<’ token
+/usr/include/boost/spirit/core/parser.hpp:61: error: expected unqualified-id before ‘<’ token
+In file included from /usr/include/boost/spirit/core/scanner/skipper.hpp:190,
+                 from /usr/include/boost/spirit/core/composite/impl/directives.ipp:16,
+                 from /usr/include/boost/spirit/core/primitives/primitives.hpp:16,
+                 from /usr/include/boost/spirit/core.hpp:33,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp: In function ‘void boost::spirit::impl::skipper_skip(const ST&, const ScannerT&, const boost::spirit::skipper_iteration_policy<BaseT>&)’:
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:30: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:30: error: template argument 1 is invalid
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:31: error: ‘BOOST_DEDUCED_TYPENAME’ cannot appear in a constant-expression
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:33: error: template argument 1 is invalid
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:33: error: template argument 2 is invalid
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:33: error: invalid type in declaration before ‘;’ token
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:35: error: ‘BOOST_DEDUCED_TYPENAME’ cannot appear in a constant-expression
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:35: error: template argument 1 is invalid
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:36: error: invalid type in declaration before ‘(’ token
+In file included from /usr/include/boost/spirit/core/primitives/primitives.hpp:16,
+                 from /usr/include/boost/spirit/core.hpp:33,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/composite/impl/directives.ipp: In function ‘RT boost::spirit::impl::contiguous_parser_parse(const ST&, const ScannerT&, const boost::spirit::skipper_iteration_policy<BaseT>&)’:
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:46: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:46: error: template argument 1 is invalid
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:47: error: ‘BOOST_DEDUCED_TYPENAME’ cannot appear in a constant-expression
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:49: error: template argument 1 is invalid
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:49: error: template argument 2 is invalid
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:49: error: invalid type in declaration before ‘;’ token
+/usr/include/boost/spirit/core/composite/impl/directives.ipp: In function ‘RT boost::spirit::impl::implicit_lexeme_parse(const ParserT&, const ScannerT&, const boost::spirit::skipper_iteration_policy<BaseT>&)’:
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:90: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:90: error: template argument 1 is invalid
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:91: error: ‘BOOST_DEDUCED_TYPENAME’ cannot appear in a constant-expression
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:93: error: template argument 1 is invalid
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:93: error: template argument 2 is invalid
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:93: error: invalid type in declaration before ‘;’ token
+/usr/include/boost/spirit/core/composite/impl/directives.ipp: In function ‘RT boost::spirit::impl::inhibit_case_parser_parse(const ST&, const ScannerT&, const boost::spirit::iteration_policy&)’:
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:134: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:134: error: template argument 1 is invalid
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:135: error: ‘BOOST_DEDUCED_TYPENAME’ cannot appear in a constant-expression
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:137: error: template argument 1 is invalid
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:137: error: template argument 2 is invalid
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:137: error: invalid type in declaration before ‘;’ token
+In file included from /usr/include/boost/spirit/core.hpp:33,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/primitives/primitives.hpp: In function ‘boost::spirit::chlit<CharT> boost::spirit::ch_p(const CharT (&)[N])’:
+/usr/include/boost/spirit/core/primitives/primitives.hpp:137: error: there are no arguments to ‘BOOST_STATIC_ASSERT’ that depend on a template parameter, so a declaration of ‘BOOST_STATIC_ASSERT’ must be available
+/usr/include/boost/spirit/core/primitives/primitives.hpp:137: error: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+/usr/include/boost/spirit/core/primitives/primitives.hpp: In member function ‘typename boost::spirit::parser_result<boost::spirit::chseq<IteratorT>, ScannerT>::type boost::spirit::chseq<IteratorT>::parse(const ScannerT&) const’:
+/usr/include/boost/spirit/core/primitives/primitives.hpp:194: error: ‘unwrap_reference’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/core/primitives/primitives.hpp:194: error: expected unqualified-id before ‘<’ token
+In file included from /usr/include/boost/spirit/core/composite/directives.hpp:19,
+                 from /usr/include/boost/spirit/core/primitives/numerics.hpp:15,
+                 from /usr/include/boost/spirit/core.hpp:34,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/composite/composite.hpp: At global scope:
+/usr/include/boost/spirit/core/composite/composite.hpp:54: error: ‘call_traits’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/core/composite/composite.hpp:54: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/core/composite/composite.hpp:55: error: ‘call_traits’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/core/composite/composite.hpp:55: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/core/composite/composite.hpp:59: error: expected `)' before ‘subj_’
+/usr/include/boost/spirit/core/composite/composite.hpp:62: error: ‘param_t’ has not been declared
+/usr/include/boost/spirit/core/composite/composite.hpp:65: error: ‘return_t’ does not name a type
+/usr/include/boost/spirit/core/composite/composite.hpp:111: error: ‘call_traits’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/core/composite/composite.hpp:111: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/core/composite/composite.hpp:112: error: ‘call_traits’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/core/composite/composite.hpp:112: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/core/composite/composite.hpp:113: error: ‘call_traits’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/core/composite/composite.hpp:113: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/core/composite/composite.hpp:114: error: ‘call_traits’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/core/composite/composite.hpp:114: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/core/composite/composite.hpp:120: error: expected `)' before ‘a’
+/usr/include/boost/spirit/core/composite/composite.hpp:123: error: ‘left_return_t’ does not name a type
+/usr/include/boost/spirit/core/composite/composite.hpp:127: error: ‘right_return_t’ does not name a type
+/usr/include/boost/spirit/core/composite/composite.hpp:133: error: invalid use of ‘::’
+/usr/include/boost/spirit/core/composite/composite.hpp:133: error: expected ‘;’ before ‘<’ token
+In file included from /usr/include/boost/spirit/core.hpp:34,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/primitives/numerics.hpp:155: error: ‘allow_leading_dot’ has not been declared
+/usr/include/boost/spirit/core/primitives/numerics.hpp:156: error: ‘allow_trailing_dot’ has not been declared
+/usr/include/boost/spirit/core/primitives/numerics.hpp:156: error: ‘int boost::spirit::ureal_parser_policies<T>::BOOST_STATIC_CONSTANT(bool, int)’ cannot be overloaded
+/usr/include/boost/spirit/core/primitives/numerics.hpp:155: error: with ‘int boost::spirit::ureal_parser_policies<T>::BOOST_STATIC_CONSTANT(bool, int)’
+/usr/include/boost/spirit/core/primitives/numerics.hpp:157: error: ‘expect_dot’ has not been declared
+/usr/include/boost/spirit/core/primitives/numerics.hpp:157: error: ‘int boost::spirit::ureal_parser_policies<T>::BOOST_STATIC_CONSTANT(bool, int)’ cannot be overloaded
+/usr/include/boost/spirit/core/primitives/numerics.hpp:155: error: with ‘int boost::spirit::ureal_parser_policies<T>::BOOST_STATIC_CONSTANT(bool, int)’
+/usr/include/boost/spirit/core/primitives/numerics.hpp:266: error: ‘expect_dot’ has not been declared
+/usr/include/boost/spirit/core/primitives/numerics.hpp:272: error: ‘expect_dot’ has not been declared
+In file included from /usr/include/boost/spirit/core/non_terminal/subrule.hpp:20,
+                 from /usr/include/boost/spirit/core.hpp:41,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/non_terminal/impl/subrule.ipp:133: error: ‘mpl’ has not been declared
+/usr/include/boost/spirit/core/non_terminal/impl/subrule.ipp:133: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/core/non_terminal/impl/subrule.ipp:171: error: ‘value’ has not been declared
+/usr/include/boost/spirit/core/non_terminal/impl/subrule.ipp:179: error: ‘mpl’ has not been declared
+/usr/include/boost/spirit/core/non_terminal/impl/subrule.ipp:186: error: ‘mpl’ has not been declared
+/usr/include/boost/spirit/core/non_terminal/impl/subrule.ipp:186: error: ‘template<class RT, class ScannerT, int ID> template<class ListT> static void boost::spirit::impl::parse_subrule::do_parse(RT&, const ScannerT&, const ListT&, int)’ cannot be overloaded
+/usr/include/boost/spirit/core/non_terminal/impl/subrule.ipp:179: error: with ‘template<class RT, class ScannerT, int ID> template<class ListT> static void boost::spirit::impl::parse_subrule::do_parse(RT&, const ScannerT&, const ListT&, int)’
+/usr/include/boost/spirit/core/non_terminal/impl/subrule.ipp: In static member function ‘static void boost::spirit::impl::parse_subrule<RT, ScannerT, ID>::do_parse(RT&, const ScannerT&, const ListT&, int)’:
+/usr/include/boost/spirit/core/non_terminal/impl/subrule.ipp:189: error: ‘mpl’ has not been declared
+/usr/include/boost/spirit/core/non_terminal/impl/subrule.ipp:189: error: ‘same_id’ was not declared in this scope
+/usr/include/boost/spirit/core/non_terminal/impl/subrule.ipp: In static member function ‘static void boost::spirit::impl::parse_subrule<RT, ScannerT, ID>::do_(RT&, const ScannerT&)’:
+/usr/include/boost/spirit/core/non_terminal/impl/subrule.ipp:197: error: ‘mpl’ has not been declared
+/usr/include/boost/spirit/core/non_terminal/impl/subrule.ipp:197: error: ‘same_id’ was not declared in this scope
+In file included from /usr/include/boost/spirit/core.hpp:41,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/non_terminal/subrule.hpp: In member function ‘boost::spirit::subrules_scanner<typename boost::spirit::rebind_scanner_policies<ScannerT, PoliciesT>::type, ListT> boost::spirit::subrules_scanner<ScannerT, ListT>::change_policies(const PoliciesT&) const’:
+/usr/include/boost/spirit/core/non_terminal/subrule.hpp:54: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/core/non_terminal/subrule.hpp:56: error: wrong number of template arguments (1, should be 2)
+/usr/include/boost/spirit/core/non_terminal/subrule_fwd.hpp:23: error: provided for ‘template<class ScannerT, class ListT> struct boost::spirit::subrules_scanner’
+/usr/include/boost/spirit/core/non_terminal/subrule.hpp:57: error: invalid type in declaration before ‘;’ token
+/usr/include/boost/spirit/core/non_terminal/subrule.hpp: In member function ‘boost::spirit::subrules_scanner<typename boost::spirit::rebind_scanner_iterator<ScannerT, IteratorT>::type, ListT> boost::spirit::subrules_scanner<ScannerT, ListT>::change_iterator(const IteratorT&, const IteratorT&) const’:
+/usr/include/boost/spirit/core/non_terminal/subrule.hpp:79: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/core/non_terminal/subrule.hpp:81: error: wrong number of template arguments (1, should be 2)
+/usr/include/boost/spirit/core/non_terminal/subrule_fwd.hpp:23: error: provided for ‘template<class ScannerT, class ListT> struct boost::spirit::subrules_scanner’
+/usr/include/boost/spirit/core/non_terminal/subrule.hpp:82: error: invalid type in declaration before ‘;’ token
+/usr/include/boost/spirit/core/non_terminal/subrule.hpp: At global scope:
+/usr/include/boost/spirit/core/non_terminal/subrule.hpp:179: error: ‘id’ has not been declared
+/usr/include/boost/spirit/core/non_terminal/subrule.hpp:245: error: ‘id’ has not been declared
+In file included from /usr/include/boost/spirit/core.hpp:42,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/non_terminal/rule.hpp:30: error: expected constructor, destructor, or type conversion before ‘(’ token
+In file included from /usr/include/boost/spirit/core/non_terminal/rule.hpp:33,
+                 from /usr/include/boost/spirit/core.hpp:42,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/non_terminal/impl/rule.ipp:50: error: ‘mpl’ has not been declared
+/usr/include/boost/spirit/core/non_terminal/impl/rule.ipp:50: error: expected unqualified-id before ‘<’ token
+In file included from /usr/include/boost/spirit/core.hpp:42,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/non_terminal/rule.hpp:163: error: expected ‘;’ before ‘<’ token
+/usr/include/boost/spirit/core/non_terminal/rule.hpp: In constructor ‘boost::spirit::rule<T0, T1, T2>::rule()’:
+/usr/include/boost/spirit/core/non_terminal/rule.hpp:122: error: class ‘boost::spirit::rule<T0, T1, T2>’ does not have any field named ‘ptr’
+/usr/include/boost/spirit/core/non_terminal/rule.hpp: In copy constructor ‘boost::spirit::rule<T0, T1, T2>::rule(const boost::spirit::rule<T0, T1, T2>&)’:
+/usr/include/boost/spirit/core/non_terminal/rule.hpp:126: error: class ‘boost::spirit::rule<T0, T1, T2>’ does not have any field named ‘ptr’
+/usr/include/boost/spirit/core/non_terminal/rule.hpp: In constructor ‘boost::spirit::rule<T0, T1, T2>::rule(const ParserT&)’:
+/usr/include/boost/spirit/core/non_terminal/rule.hpp:130: error: class ‘boost::spirit::rule<T0, T1, T2>’ does not have any field named ‘ptr’
+/usr/include/boost/spirit/core/non_terminal/rule.hpp: In member function ‘boost::spirit::rule<T0, T1, T2>& boost::spirit::rule<T0, T1, T2>::operator=(const ParserT&)’:
+/usr/include/boost/spirit/core/non_terminal/rule.hpp:135: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/core/non_terminal/rule.hpp: In member function ‘boost::spirit::rule<T0, T1, T2>& boost::spirit::rule<T0, T1, T2>::operator=(const boost::spirit::rule<T0, T1, T2>&)’:
+/usr/include/boost/spirit/core/non_terminal/rule.hpp:141: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/core/non_terminal/rule.hpp: In member function ‘boost::spirit::rule<T0, T1, T2> boost::spirit::rule<T0, T1, T2>::copy() const’:
+/usr/include/boost/spirit/core/non_terminal/rule.hpp:148: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/core/non_terminal/rule.hpp: In member function ‘boost::spirit::impl::abstract_parser<typename boost::spirit::impl::rule_base<boost::spirit::rule<T0, T1, T2>, const boost::spirit::rule<T0, T1, T2>&, T0, T1, T2>::scanner_t, typename boost::spirit::impl::rule_base<boost::spirit::rule<T0, T1, T2>, const boost::spirit::rule<T0, T1, T2>&, T0, T1, T2>::attr_t>* boost::spirit::rule<T0, T1, T2>::get() const’:
+/usr/include/boost/spirit/core/non_terminal/rule.hpp:157: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/core/non_terminal/rule.hpp: In constructor ‘boost::spirit::rule<T0, T1, T2>::rule(const boost::spirit::impl::abstract_parser<typename boost::spirit::impl::rule_base<boost::spirit::rule<T0, T1, T2>, const boost::spirit::rule<T0, T1, T2>&, T0, T1, T2>::scanner_t, typename boost::spirit::impl::rule_base<boost::spirit::rule<T0, T1, T2>, const boost::spirit::rule<T0, T1, T2>&, T0, T1, T2>::attr_t>*)’:
+/usr/include/boost/spirit/core/non_terminal/rule.hpp:161: error: class ‘boost::spirit::rule<T0, T1, T2>’ does not have any field named ‘ptr’
+In file included from /usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp:15,
+                 from /usr/include/boost/spirit/core/non_terminal/grammar.hpp:21,
+                 from /usr/include/boost/spirit/core.hpp:43,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/non_terminal/impl/object_with_id.ipp: At global scope:
+/usr/include/boost/spirit/core/non_terminal/impl/object_with_id.ipp:63: error: invalid use of ‘::’
+/usr/include/boost/spirit/core/non_terminal/impl/object_with_id.ipp:63: error: expected ‘;’ before ‘<’ token
+/usr/include/boost/spirit/core/non_terminal/impl/object_with_id.ipp: In member function ‘IdT boost::spirit::impl::object_with_id_base<TagT, IdT>::acquire_object_id()’:
+/usr/include/boost/spirit/core/non_terminal/impl/object_with_id.ipp:140: error: expected initializer before ‘<’ token
+/usr/include/boost/spirit/core/non_terminal/impl/object_with_id.ipp:143: error: ‘static_supply’ was not declared in this scope
+/usr/include/boost/spirit/core/non_terminal/impl/object_with_id.ipp:145: error: ‘id_supply’ was not declared in this scope
+/usr/include/boost/spirit/core/non_terminal/impl/object_with_id.ipp:145: error: ‘static_supply’ was not declared in this scope
+/usr/include/boost/spirit/core/non_terminal/impl/object_with_id.ipp:148: error: ‘id_supply’ was not declared in this scope
+/usr/include/boost/spirit/core/non_terminal/impl/object_with_id.ipp: In member function ‘void boost::spirit::impl::object_with_id_base<TagT, IdT>::release_object_id(IdT)’:
+/usr/include/boost/spirit/core/non_terminal/impl/object_with_id.ipp:156: error: ‘id_supply’ was not declared in this scope
+In file included from /usr/include/boost/spirit/core/non_terminal/grammar.hpp:21,
+                 from /usr/include/boost/spirit/core.hpp:43,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp: At global scope:
+/usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp:147: error: typedef name may not be a nested-name-specifier
+/usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp:147: error: expected ‘;’ before ‘<’ token
+/usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp:148: error: typedef name may not be a nested-name-specifier
+/usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp:148: error: expected ‘;’ before ‘<’ token
+/usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp:153: error: expected `)' before ‘&’ token
+/usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp:205: error: ‘helper_ptr_t’ does not name a type
+/usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp: In member function ‘int boost::spirit::impl::grammar_helper<GrammarT, DerivedT, ScannerT>::undefine(GrammarT*)’:
+/usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp:197: error: ‘self’ was not declared in this scope
+/usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp: In function ‘typename DerivedT::definition<ScannerT>& boost::spirit::impl::get_definition(const boost::spirit::grammar<DerivedT, ContextT>*)’:
+/usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp:232: error: ‘make_shared’ is not a member of ‘boost’
+/usr/include/boost/spirit/core/non_terminal/impl/grammar.ipp:234: error: ‘make_shared’ is not a member of ‘boost’
+In file included from /usr/include/boost/spirit/core/composite/operators.hpp:14,
+                 from /usr/include/boost/spirit/meta/impl/parser_traits.ipp:14,
+                 from /usr/include/boost/spirit/meta/parser_traits.hpp:18,
+                 from /usr/include/boost/spirit/core/composite/epsilon.hpp:15,
+                 from /usr/include/boost/spirit/core.hpp:49,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/composite/sequence.hpp: In static member function ‘static boost::spirit::sequence<typename boost::spirit::as_parser<A>::type, typename boost::spirit::as_parser<B>::type> boost::spirit::sequence_parser_gen::generate(const A&, const B&)’:
+/usr/include/boost/spirit/core/composite/sequence.hpp:83: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/core/composite/sequence.hpp:84: error: wrong number of template arguments (1, should be 2)
+/usr/include/boost/spirit/core/composite/sequence.hpp:38: error: provided for ‘template<class A, class B> struct boost::spirit::sequence’
+In file included from /usr/include/boost/spirit/core/composite/operators.hpp:16,
+                 from /usr/include/boost/spirit/meta/impl/parser_traits.ipp:14,
+                 from /usr/include/boost/spirit/meta/parser_traits.hpp:18,
+                 from /usr/include/boost/spirit/core/composite/epsilon.hpp:15,
+                 from /usr/include/boost/spirit/core.hpp:49,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/composite/sequential_or.hpp: In static member function ‘static boost::spirit::sequential_or<typename boost::spirit::as_parser<A>::type, typename boost::spirit::as_parser<B>::type> boost::spirit::sequential_or_parser_gen::generate(const A&, const B&)’:
+/usr/include/boost/spirit/core/composite/sequential_or.hpp:104: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/core/composite/sequential_or.hpp:105: error: wrong number of template arguments (1, should be 2)
+/usr/include/boost/spirit/core/composite/sequential_or.hpp:42: error: provided for ‘template<class A, class B> struct boost::spirit::sequential_or’
+In file included from /usr/include/boost/spirit/core/composite/operators.hpp:17,
+                 from /usr/include/boost/spirit/meta/impl/parser_traits.ipp:14,
+                 from /usr/include/boost/spirit/meta/parser_traits.hpp:18,
+                 from /usr/include/boost/spirit/core/composite/epsilon.hpp:15,
+                 from /usr/include/boost/spirit/core.hpp:49,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/composite/alternative.hpp: In static member function ‘static boost::spirit::alternative<typename boost::spirit::as_parser<A>::type, typename boost::spirit::as_parser<B>::type> boost::spirit::alternative_parser_gen::generate(const A&, const B&)’:
+/usr/include/boost/spirit/core/composite/alternative.hpp:88: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/core/composite/alternative.hpp:89: error: wrong number of template arguments (1, should be 2)
+/usr/include/boost/spirit/core/composite/impl/directives.ipp:27: error: provided for ‘template<class A, class B> struct boost::spirit::alternative’
+In file included from /usr/include/boost/spirit/core/composite/operators.hpp:18,
+                 from /usr/include/boost/spirit/meta/impl/parser_traits.ipp:14,
+                 from /usr/include/boost/spirit/meta/parser_traits.hpp:18,
+                 from /usr/include/boost/spirit/core/composite/epsilon.hpp:15,
+                 from /usr/include/boost/spirit/core.hpp:49,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/composite/difference.hpp: In static member function ‘static boost::spirit::difference<typename boost::spirit::as_parser<A>::type, typename boost::spirit::as_parser<B>::type> boost::spirit::difference_parser_gen::generate(const A&, const B&)’:
+/usr/include/boost/spirit/core/composite/difference.hpp:91: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/core/composite/difference.hpp:92: error: wrong number of template arguments (1, should be 2)
+/usr/include/boost/spirit/core/composite/difference.hpp:38: error: provided for ‘template<class A, class B> struct boost::spirit::difference’
+In file included from /usr/include/boost/spirit/core/composite/operators.hpp:19,
+                 from /usr/include/boost/spirit/meta/impl/parser_traits.ipp:14,
+                 from /usr/include/boost/spirit/meta/parser_traits.hpp:18,
+                 from /usr/include/boost/spirit/core/composite/epsilon.hpp:15,
+                 from /usr/include/boost/spirit/core.hpp:49,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/composite/intersection.hpp: In static member function ‘static boost::spirit::intersection<typename boost::spirit::as_parser<A>::type, typename boost::spirit::as_parser<B>::type> boost::spirit::intersection_parser_gen::generate(const A&, const B&)’:
+/usr/include/boost/spirit/core/composite/intersection.hpp:92: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/core/composite/intersection.hpp:93: error: wrong number of template arguments (1, should be 2)
+/usr/include/boost/spirit/core/composite/intersection.hpp:41: error: provided for ‘template<class A, class B> struct boost::spirit::intersection’
+In file included from /usr/include/boost/spirit/core/composite/operators.hpp:20,
+                 from /usr/include/boost/spirit/meta/impl/parser_traits.ipp:14,
+                 from /usr/include/boost/spirit/meta/parser_traits.hpp:18,
+                 from /usr/include/boost/spirit/core/composite/epsilon.hpp:15,
+                 from /usr/include/boost/spirit/core.hpp:49,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/composite/exclusive_or.hpp: In static member function ‘static boost::spirit::exclusive_or<typename boost::spirit::as_parser<A>::type, typename boost::spirit::as_parser<B>::type> boost::spirit::exclusive_or_parser_gen::generate(const A&, const B&)’:
+/usr/include/boost/spirit/core/composite/exclusive_or.hpp:92: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/core/composite/exclusive_or.hpp:93: error: wrong number of template arguments (1, should be 2)
+/usr/include/boost/spirit/core/composite/exclusive_or.hpp:38: error: provided for ‘template<class A, class B> struct boost::spirit::exclusive_or’
+In file included from /usr/include/boost/spirit/meta/parser_traits.hpp:18,
+                 from /usr/include/boost/spirit/core/composite/epsilon.hpp:15,
+                 from /usr/include/boost/spirit/core.hpp:49,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp: At global scope:
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:100: error: ‘is_alternative’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:101: error: ‘is_sequence’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:101: error: ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’ cannot be overloaded
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:100: error: with ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:102: error: ‘is_sequential_or’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:102: error: ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’ cannot be overloaded
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:100: error: with ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:103: error: ‘is_intersection’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:103: error: ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’ cannot be overloaded
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:100: error: with ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:104: error: ‘is_difference’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:104: error: ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’ cannot be overloaded
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:100: error: with ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:105: error: ‘is_exclusive_or’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:105: error: ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’ cannot be overloaded
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:100: error: with ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:106: error: ‘is_optional’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:106: error: ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’ cannot be overloaded
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:100: error: with ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:107: error: ‘is_kleene_star’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:107: error: ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’ cannot be overloaded
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:100: error: with ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:108: error: ‘is_positive’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:108: error: ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’ cannot be overloaded
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:100: error: with ‘int boost::spirit::impl::parser_type_traits_base::BOOST_STATIC_CONSTANT(bool, int)’
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:122: error: ‘is_alternative’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:129: error: ‘is_sequence’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:136: error: ‘is_sequential_or’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:143: error: ‘is_intersection’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:150: error: ‘is_difference’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:157: error: ‘is_exclusive_or’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:164: error: ‘is_optional’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:171: error: ‘is_kleene_star’ has not been declared
+/usr/include/boost/spirit/meta/impl/parser_traits.ipp:178: error: ‘is_positive’ has not been declared
+In file included from /usr/include/boost/spirit/core/composite/epsilon.hpp:15,
+                 from /usr/include/boost/spirit/core.hpp:49,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/meta/parser_traits.hpp:41: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:42: error: ‘is_base_and_derived’ is not a member of ‘boost’
+/usr/include/boost/spirit/meta/parser_traits.hpp:42: error: expected primary-expression before ‘,’ token
+/usr/include/boost/spirit/meta/parser_traits.hpp:42: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/meta/parser_traits.hpp:42: error: ‘::value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:57: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:57: error: ‘is_convertible’ is not a member of ‘boost’
+/usr/include/boost/spirit/meta/parser_traits.hpp:58: error: expected `(' before ‘,’ token
+/usr/include/boost/spirit/meta/parser_traits.hpp:58: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/meta/parser_traits.hpp:58: error: ‘::value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:71: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:71: error: ‘is_convertible’ is not a member of ‘boost’
+/usr/include/boost/spirit/meta/parser_traits.hpp:72: error: expected `(' before ‘,’ token
+/usr/include/boost/spirit/meta/parser_traits.hpp:72: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/meta/parser_traits.hpp:72: error: ‘::value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:84: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:84: error: ‘is_convertible’ is not a member of ‘boost’
+/usr/include/boost/spirit/meta/parser_traits.hpp:85: error: expected `(' before ‘,’ token
+/usr/include/boost/spirit/meta/parser_traits.hpp:85: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/meta/parser_traits.hpp:85: error: ‘::value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:97: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:106: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:113: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:120: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:127: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:134: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:141: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:148: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:155: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:162: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/parser_traits.hpp:183: error: ‘boost::spirit::is_unary_composite::value’ is not a type
+/usr/include/boost/spirit/meta/parser_traits.hpp:215: error: ‘boost::spirit::is_binary_composite::value’ is not a type
+/usr/include/boost/spirit/meta/parser_traits.hpp:222: error: ‘boost::spirit::is_binary_composite::value’ is not a type
+/usr/include/boost/spirit/meta/parser_traits.hpp:262: error: ‘boost::spirit::is_action_parser::value’ is not a type
+/usr/include/boost/spirit/meta/parser_traits.hpp:293: error: ‘boost::spirit::is_action_parser::value’ is not a type
+In file included from /usr/include/boost/spirit/core.hpp:49,
+                 from /usr/include/boost/spirit.hpp:28,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/core/composite/epsilon.hpp:238: error: ‘mpl’ has not been declared
+/usr/include/boost/spirit/core/composite/epsilon.hpp:238: error: expected unqualified-id before ‘<’ token
+In file included from /usr/include/boost/spirit/meta.hpp:21,
+                 from /usr/include/boost/spirit.hpp:35,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/meta/fundamental.hpp:28: error: ‘mpl’ was not declared in this scope
+/usr/include/boost/spirit/meta/fundamental.hpp:28: error: parse error in template argument list
+/usr/include/boost/spirit/meta/fundamental.hpp:30: error: ‘value’ has not been declared
+/usr/include/boost/spirit/meta/fundamental.hpp:45: error: ‘mpl’ was not declared in this scope
+/usr/include/boost/spirit/meta/fundamental.hpp:45: error: parse error in template argument list
+/usr/include/boost/spirit/meta/fundamental.hpp:47: error: ‘value’ has not been declared
+In file included from /usr/include/boost/spirit/meta/traverse.hpp:13,
+                 from /usr/include/boost/spirit/meta.hpp:24,
+                 from /usr/include/boost/spirit.hpp:35,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/meta/impl/traverse.ipp:37: error: ‘level’ has not been declared
+/usr/include/boost/spirit/meta/impl/traverse.ipp:38: error: ‘node’ has not been declared
+/usr/include/boost/spirit/meta/impl/traverse.ipp:38: error: ‘int boost::spirit::traverse_post_order_env<Level, Node, Index, LastLeft>::BOOST_STATIC_CONSTANT(int, int)’ cannot be overloaded
+/usr/include/boost/spirit/meta/impl/traverse.ipp:37: error: with ‘int boost::spirit::traverse_post_order_env<Level, Node, Index, LastLeft>::BOOST_STATIC_CONSTANT(int, int)’
+/usr/include/boost/spirit/meta/impl/traverse.ipp:39: error: ‘index’ has not been declared
+/usr/include/boost/spirit/meta/impl/traverse.ipp:39: error: ‘int boost::spirit::traverse_post_order_env<Level, Node, Index, LastLeft>::BOOST_STATIC_CONSTANT(int, int)’ cannot be overloaded
+/usr/include/boost/spirit/meta/impl/traverse.ipp:37: error: with ‘int boost::spirit::traverse_post_order_env<Level, Node, Index, LastLeft>::BOOST_STATIC_CONSTANT(int, int)’
+/usr/include/boost/spirit/meta/impl/traverse.ipp:40: error: ‘lastleft’ has not been declared
+/usr/include/boost/spirit/meta/impl/traverse.ipp:40: error: ‘int boost::spirit::traverse_post_order_env<Level, Node, Index, LastLeft>::BOOST_STATIC_CONSTANT(int, int)’ cannot be overloaded
+/usr/include/boost/spirit/meta/impl/traverse.ipp:37: error: with ‘int boost::spirit::traverse_post_order_env<Level, Node, Index, LastLeft>::BOOST_STATIC_CONSTANT(int, int)’
+/usr/include/boost/spirit/meta/impl/traverse.ipp:102: error: ‘thisnum’ has not been declared
+/usr/include/boost/spirit/meta/impl/traverse.ipp:104: error: ‘leftnum’ has not been declared
+/usr/include/boost/spirit/meta/impl/traverse.ipp:104: error: ‘int boost::spirit::parser_traversal_binary_result<MetaT, BinaryT, LeftT, RightT, EnvT>::BOOST_STATIC_CONSTANT(int, int)’ cannot be overloaded
+/usr/include/boost/spirit/meta/impl/traverse.ipp:102: error: with ‘int boost::spirit::parser_traversal_binary_result<MetaT, BinaryT, LeftT, RightT, EnvT>::BOOST_STATIC_CONSTANT(int, int)’
+/usr/include/boost/spirit/meta/impl/traverse.ipp:106: error: ‘leafnum’ has not been declared
+/usr/include/boost/spirit/meta/impl/traverse.ipp:106: error: ‘int boost::spirit::parser_traversal_binary_result<MetaT, BinaryT, LeftT, RightT, EnvT>::BOOST_STATIC_CONSTANT(int, int)’ cannot be overloaded
+/usr/include/boost/spirit/meta/impl/traverse.ipp:102: error: with ‘int boost::spirit::parser_traversal_binary_result<MetaT, BinaryT, LeftT, RightT, EnvT>::BOOST_STATIC_CONSTANT(int, int)’
+In file included from /usr/include/boost/spirit/error_handling.hpp:20,
+                 from /usr/include/boost/spirit.hpp:42,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/error_handling/exceptions.hpp: In function ‘void boost::spirit::throw_(IteratorT, ErrorDescrT)’:
+/usr/include/boost/spirit/error_handling/exceptions.hpp:105: error: ‘throw_exception’ is not a member of ‘boost’
+In file included from /usr/include/boost/spirit/error_handling/exceptions.hpp:359,
+                 from /usr/include/boost/spirit/error_handling.hpp:20,
+                 from /usr/include/boost/spirit.hpp:42,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/error_handling/impl/exceptions.ipp: In function ‘RT boost::spirit::impl::fallback_parser_parse(const ParserT&, const ScannerT&)’:
+/usr/include/boost/spirit/error_handling/impl/exceptions.ipp:54: error: ‘throw_exception’ is not a member of ‘boost’
+In file included from /usr/include/boost/spirit/iterator.hpp:21,
+                 from /usr/include/boost/spirit.hpp:49,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/iterator/file_iterator.hpp: At global scope:
+/usr/include/boost/spirit/iterator/file_iterator.hpp:152: error: expected template-name before ‘<’ token
+/usr/include/boost/spirit/iterator/file_iterator.hpp:152: error: expected `{' before ‘<’ token
+/usr/include/boost/spirit/iterator/file_iterator.hpp:152: error: expected unqualified-id before ‘<’ token
+In file included from /usr/include/boost/spirit/iterator/file_iterator.hpp:222,
+                 from /usr/include/boost/spirit/iterator.hpp:21,
+                 from /usr/include/boost/spirit.hpp:49,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp:142: error: invalid use of ‘::’
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp:142: error: expected ‘;’ before ‘<’ token
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp: In constructor ‘boost::spirit::fileiter_impl::std_file_iterator<CharT>::std_file_iterator(std::string)’:
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp:74: error: ‘m_file’ was not declared in this scope
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp: In member function ‘boost::spirit::fileiter_impl::std_file_iterator<CharT>& boost::spirit::fileiter_impl::std_file_iterator<CharT>::operator=(const boost::spirit::fileiter_impl::std_file_iterator<CharT>&)’:
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp:86: error: ‘m_file’ was not declared in this scope
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp: In member function ‘boost::spirit::fileiter_impl::std_file_iterator<CharT>::operator bool() const’:
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp:97: error: ‘m_file’ was not declared in this scope
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp: In member function ‘bool boost::spirit::fileiter_impl::std_file_iterator<CharT>::operator==(const boost::spirit::fileiter_impl::std_file_iterator<CharT>&) const’:
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp:101: error: ‘m_file’ was not declared in this scope
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp: In member function ‘void boost::spirit::fileiter_impl::std_file_iterator<CharT>::seek_end()’:
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp:125: error: ‘m_file’ was not declared in this scope
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp: In member function ‘void boost::spirit::fileiter_impl::std_file_iterator<CharT>::update_char()’:
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp:150: error: ‘m_file’ was not declared in this scope
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp:153: error: ‘m_file’ was not declared in this scope
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp: At global scope:
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp:441: error: invalid use of incomplete type ‘class boost::spirit::file_iterator<CharT, BaseIterator>’
+/usr/include/boost/spirit/iterator/file_iterator_fwd.hpp:29: error: declaration of ‘class boost::spirit::file_iterator<CharT, BaseIterator>’
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp:450: error: expected ‘,’ or ‘...’ before ‘&’ token
+/usr/include/boost/spirit/iterator/impl/file_iterator.ipp:450: error: invalid use of incomplete type ‘class boost::spirit::file_iterator<CharT, BaseIterator>’
+/usr/include/boost/spirit/iterator/file_iterator_fwd.hpp:29: error: declaration of ‘class boost::spirit::file_iterator<CharT, BaseIterator>’
+In file included from /usr/include/boost/spirit/iterator.hpp:22,
+                 from /usr/include/boost/spirit.hpp:49,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:178: error: typedef name may not be a nested-name-specifier
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:178: error: expected ‘;’ before ‘<’ token
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:179: error: typedef name may not be a nested-name-specifier
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:179: error: expected ‘;’ before ‘<’ token
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:183: error: ‘fsq_iterator’ is not a template
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:183: error: ‘fsq_iterator’ in namespace ‘boost::spirit::impl’ does not name a type
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:183: error: friend declaration does not name a class or function
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:184: error: ‘fsq_iterator’ is not a template
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:184: error: ‘fsq_iterator’ in namespace ‘boost::spirit::impl’ does not name a type
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:184: error: friend declaration does not name a class or function
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:206: error: invalid use of template-name ‘std::iterator’ without an argument list
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:211: error: ‘const_iterator’ does not name a type
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:216: error: invalid use of template-name ‘std::iterator’ without an argument list
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:221: error: ‘const_iterator’ does not name a type
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:244: error: ‘MAX_SIZE’ has not been declared
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp: In copy constructor ‘boost::spirit::fixed_size_queue<T, N>::fixed_size_queue(const boost::spirit::fixed_size_queue<T, N>&)’:
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:272: error: there are no arguments to ‘begin’ that depend on a template parameter, so a declaration of ‘begin’ must be available
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp: In member function ‘boost::spirit::fixed_size_queue<T, N>& boost::spirit::fixed_size_queue<T, N>::operator=(const boost::spirit::fixed_size_queue<T, N>&)’:
+/usr/include/boost/spirit/iterator/fixed_size_queue.hpp:288: error: there are no arguments to ‘begin’ that depend on a template parameter, so a declaration of ‘begin’ must be available
+In file included from /usr/include/boost/spirit/iterator/position_iterator.hpp:18,
+                 from /usr/include/boost/spirit/iterator.hpp:23,
+                 from /usr/include/boost/spirit.hpp:49,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp: At global scope:
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:33: error: ‘detail’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:33: error: expected template-argument before ‘::’ token
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:33: error: expected ‘>’ before ‘::’ token
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:34: error: template argument 1 is invalid
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:34: error: template argument 2 is invalid
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:34: error: template argument 3 is invalid
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:35: error: expected `::' before ‘>’ token
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:35: error: expected identifier before ‘>’ token
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:35: error: template argument 1 is invalid
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:35: error: expected `::' before ‘,’ token
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:35: error: expected identifier before ‘,’ token
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:45: error: ‘detail’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:45: error: expected template-argument before ‘::’ token
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:45: error: expected ‘>’ before ‘::’ token
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:46: error: template argument 1 is invalid
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:46: error: template argument 2 is invalid
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:46: error: template argument 3 is invalid
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:47: error: expected `::' before ‘>’ token
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:47: error: expected identifier before ‘>’ token
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:47: error: template argument 1 is invalid
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:48: error: expected `::' before ‘>’ token
+/usr/include/boost/spirit/iterator/position_iterator_fwd.hpp:48: error: expected identifier before ‘>’ token
+In file included from /usr/include/boost/spirit/iterator/position_iterator.hpp:94,
+                 from /usr/include/boost/spirit/iterator.hpp:23,
+                 from /usr/include/boost/spirit.hpp:49,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/iterator/impl/position_iterator.ipp:105: error: ‘boost::detail’ has not been declared
+/usr/include/boost/spirit/iterator/impl/position_iterator.ipp:105: error: typedef name may not be a nested-name-specifier
+/usr/include/boost/spirit/iterator/impl/position_iterator.ipp:105: error: expected ‘;’ before ‘<’ token
+/usr/include/boost/spirit/iterator/impl/position_iterator.ipp:106: error: ‘traits’ has not been declared
+/usr/include/boost/spirit/iterator/impl/position_iterator.ipp:107: error: ‘traits’ has not been declared
+/usr/include/boost/spirit/iterator/impl/position_iterator.ipp:110: error: ‘add_const’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/iterator/impl/position_iterator.ipp:110: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/iterator/impl/position_iterator.ipp:116: error: ‘boost::mpl’ has not been declared
+/usr/include/boost/spirit/iterator/impl/position_iterator.ipp:116: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/iterator/impl/position_iterator.ipp:122: error: typedef name may not be a nested-name-specifier
+/usr/include/boost/spirit/iterator/impl/position_iterator.ipp:122: error: expected ‘;’ before ‘<’ token
+In file included from /usr/include/boost/spirit/iterator.hpp:24,
+                 from /usr/include/boost/spirit.hpp:49,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/iterator/multi_pass.hpp: In member function ‘void boost::spirit::multi_pass_policies::buf_id_check::check() const’:
+/usr/include/boost/spirit/iterator/multi_pass.hpp:199: error: ‘throw_exception’ is not a member of ‘boost’
+/usr/include/boost/spirit/iterator/multi_pass.hpp: At global scope:
+/usr/include/boost/spirit/iterator/multi_pass.hpp:492: error: ‘boost::detail’ has not been declared
+/usr/include/boost/spirit/iterator/multi_pass.hpp:492: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/iterator/multi_pass.hpp:501: error: ‘result_type’ does not name a type
+/usr/include/boost/spirit/iterator/multi_pass.hpp:512: error: ‘result_type’ does not name a type
+/usr/include/boost/spirit/iterator/multi_pass.hpp:514: error: ‘boost::detail’ has not been declared
+/usr/include/boost/spirit/iterator/multi_pass.hpp:514: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/iterator/multi_pass.hpp:517: error: ‘boost::detail’ has not been declared
+/usr/include/boost/spirit/iterator/multi_pass.hpp:517: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/iterator/multi_pass.hpp:520: error: ‘boost::detail’ has not been declared
+/usr/include/boost/spirit/iterator/multi_pass.hpp:520: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/iterator/multi_pass.hpp:548: error: ‘boost::detail’ has not been declared
+/usr/include/boost/spirit/iterator/multi_pass.hpp:548: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/iterator/multi_pass.hpp:564: error: ‘reference’ does not name a type
+/usr/include/boost/spirit/iterator/multi_pass.hpp:765: error: expected ‘;’ before ‘<’ token
+/usr/include/boost/spirit/iterator/multi_pass.hpp:767: error: typedef name may not be a nested-name-specifier
+/usr/include/boost/spirit/iterator/multi_pass.hpp:768: error: expected ‘;’ before ‘<’ token
+In file included from /usr/include/boost/spirit/symbols.hpp:20,
+                 from /usr/include/boost/spirit.hpp:56,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/symbols/symbols.hpp:79: error: typedef name may not be a nested-name-specifier
+/usr/include/boost/spirit/symbols/symbols.hpp:79: error: expected ‘;’ before ‘<’ token
+/usr/include/boost/spirit/symbols/symbols.hpp:94: error: ‘symbol_ref_t’ was not declared in this scope
+/usr/include/boost/spirit/symbols/symbols.hpp:94: error: template argument 2 is invalid
+In file included from /usr/include/boost/spirit/utility/impl/chset/range_run.hpp:118,
+                 from /usr/include/boost/spirit/utility/impl/chset/basic_chset.hpp:15,
+                 from /usr/include/boost/spirit/utility/chset.hpp:16,
+                 from /usr/include/boost/spirit/utility.hpp:27,
+                 from /usr/include/boost/spirit.hpp:63,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/utility/impl/chset/range_run.ipp: In member function ‘bool boost::spirit::utility::impl::range<CharT>::overlaps(const boost::spirit::utility::impl::range<CharT>&) const’:
+/usr/include/boost/spirit/utility/impl/chset/range_run.ipp:57: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset/range_run.ipp:57: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset/range_run.ipp:59: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset/range_run.ipp:59: error: expected primary-expression before ‘>’ token
+In file included from /usr/include/boost/spirit/utility/impl/chset/basic_chset.hpp:102,
+                 from /usr/include/boost/spirit/utility/chset.hpp:16,
+                 from /usr/include/boost/spirit/utility.hpp:27,
+                 from /usr/include/boost/spirit.hpp:63,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/utility/impl/chset/basic_chset.ipp: In member function ‘void boost::spirit::basic_chset<CharT>::inverse()’:
+/usr/include/boost/spirit/utility/impl/chset/basic_chset.ipp:70: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset/basic_chset.ipp:70: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset/basic_chset.ipp:71: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset/basic_chset.ipp:71: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset/basic_chset.ipp: In member function ‘boost::spirit::basic_chset<CharT>& boost::spirit::basic_chset<CharT>::operator&=(const boost::spirit::basic_chset<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset/basic_chset.ipp:101: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset/basic_chset.ipp:101: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset/basic_chset.ipp:102: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset/basic_chset.ipp:102: error: expected primary-expression before ‘>’ token
+In file included from /usr/include/boost/spirit/utility.hpp:27,
+                 from /usr/include/boost/spirit.hpp:63,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/utility/chset.hpp: At global scope:
+/usr/include/boost/spirit/utility/chset.hpp:27: error: variable or field ‘construct_chset’ declared void
+/usr/include/boost/spirit/utility/chset.hpp:27: error: ‘shared_ptr’ is not a member of ‘boost’
+/usr/include/boost/spirit/utility/chset.hpp:27: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/chset.hpp:27: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/chset.hpp:28: error: expected primary-expression before ‘const’
+/usr/include/boost/spirit/utility/chset.hpp:85: error: invalid use of ‘::’
+/usr/include/boost/spirit/utility/chset.hpp:85: error: expected ‘;’ before ‘<’ token
+/usr/include/boost/spirit/utility/chset.hpp: In constructor ‘boost::spirit::chset<CharT>::chset(const CharT2*)’:
+/usr/include/boost/spirit/utility/chset.hpp:53: error: class ‘boost::spirit::chset<CharT>’ does not have any field named ‘ptr’
+/usr/include/boost/spirit/utility/chset.hpp:55: error: ‘construct_chset’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/chset.hpp:55: error: ‘ptr’ was not declared in this scope
+In file included from /usr/include/boost/spirit/utility/chset_operators.hpp:398,
+                 from /usr/include/boost/spirit/utility/chset.hpp:183,
+                 from /usr/include/boost/spirit/utility/chset_operators.hpp:14,
+                 from /usr/include/boost/spirit/utility/chset.hpp:183,
+                 from /usr/include/boost/spirit/utility/impl/chset.ipp:15,
+                 from /usr/include/boost/spirit/utility/chset.hpp:182,
+                 from /usr/include/boost/spirit/utility.hpp:27,
+                 from /usr/include/boost/spirit.hpp:63,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp: In function ‘boost::spirit::chset<CharT> boost::spirit::operator&(const boost::spirit::chset<CharT>&, const boost::spirit::range<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:82: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:82: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:83: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:83: error: expected primary-expression before ‘(’ token
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:83: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:83: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:85: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:85: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:86: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:86: error: expected primary-expression before ‘(’ token
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:86: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:86: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp: In function ‘boost::spirit::chset<CharT> boost::spirit::operator&(const boost::spirit::range<CharT>&, const boost::spirit::chset<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:125: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:125: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:126: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:126: error: expected primary-expression before ‘(’ token
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:126: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:126: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:128: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:128: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:129: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:129: error: expected primary-expression before ‘(’ token
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:129: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:129: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp: In function ‘const boost::spirit::range<CharT>& boost::spirit::impl::full()’:
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:512: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:512: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:513: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset_operators.ipp:513: error: expected primary-expression before ‘>’ token
+In file included from /usr/include/boost/spirit/utility/chset.hpp:182,
+                 from /usr/include/boost/spirit/utility.hpp:27,
+                 from /usr/include/boost/spirit.hpp:63,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/utility/impl/chset.ipp: At global scope:
+/usr/include/boost/spirit/utility/impl/chset.ipp:28: error: variable or field ‘detach’ declared void
+/usr/include/boost/spirit/utility/impl/chset.ipp:28: error: ‘shared_ptr’ is not a member of ‘boost’
+/usr/include/boost/spirit/utility/impl/chset.ipp:28: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset.ipp:28: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp:37: error: variable or field ‘detach_clear’ declared void
+/usr/include/boost/spirit/utility/impl/chset.ipp:37: error: ‘shared_ptr’ is not a member of ‘boost’
+/usr/include/boost/spirit/utility/impl/chset.ipp:37: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset.ipp:37: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp:46: error: variable or field ‘construct_chset’ declared void
+/usr/include/boost/spirit/utility/impl/chset.ipp:46: error: ‘shared_ptr’ is not a member of ‘boost’
+/usr/include/boost/spirit/utility/impl/chset.ipp:46: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset.ipp:46: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp:47: error: expected primary-expression before ‘const’
+/usr/include/boost/spirit/utility/impl/chset.ipp: In constructor ‘boost::spirit::chset<CharT>::chset()’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:108: error: class ‘boost::spirit::chset<CharT>’ does not have any field named ‘ptr’
+/usr/include/boost/spirit/utility/impl/chset.ipp: In copy constructor ‘boost::spirit::chset<CharT>::chset(const boost::spirit::chset<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:112: error: class ‘boost::spirit::chset<CharT>’ does not have any field named ‘ptr’
+/usr/include/boost/spirit/utility/impl/chset.ipp: In constructor ‘boost::spirit::chset<CharT>::chset(CharT)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:116: error: class ‘boost::spirit::chset<CharT>’ does not have any field named ‘ptr’
+/usr/include/boost/spirit/utility/impl/chset.ipp:117: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In constructor ‘boost::spirit::chset<CharT>::chset(boost::spirit::anychar_parser)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:121: error: class ‘boost::spirit::chset<CharT>’ does not have any field named ‘ptr’
+/usr/include/boost/spirit/utility/impl/chset.ipp:123: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp:124: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset.ipp:124: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset.ipp:125: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset.ipp:125: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset.ipp: In constructor ‘boost::spirit::chset<CharT>::chset(boost::spirit::nothing_parser)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:131: error: class ‘boost::spirit::chset<CharT>’ does not have any field named ‘ptr’
+/usr/include/boost/spirit/utility/impl/chset.ipp: In constructor ‘boost::spirit::chset<CharT>::chset(const boost::spirit::chlit<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:135: error: class ‘boost::spirit::chset<CharT>’ does not have any field named ‘ptr’
+/usr/include/boost/spirit/utility/impl/chset.ipp:136: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In constructor ‘boost::spirit::chset<CharT>::chset(const boost::spirit::range<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:140: error: class ‘boost::spirit::chset<CharT>’ does not have any field named ‘ptr’
+/usr/include/boost/spirit/utility/impl/chset.ipp:141: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘boost::spirit::chset<CharT>& boost::spirit::chset<CharT>::operator=(const boost::spirit::chset<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:168: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘boost::spirit::chset<CharT>& boost::spirit::chset<CharT>::operator=(CharT)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:176: error: ‘detach_clear’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/impl/chset.ipp:176: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘boost::spirit::chset<CharT>& boost::spirit::chset<CharT>::operator=(boost::spirit::anychar_parser)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:185: error: ‘detach_clear’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/impl/chset.ipp:185: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp:187: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset.ipp:187: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset.ipp:188: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset.ipp:188: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘boost::spirit::chset<CharT>& boost::spirit::chset<CharT>::operator=(boost::spirit::nothing_parser)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:197: error: ‘detach_clear’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/impl/chset.ipp:197: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘boost::spirit::chset<CharT>& boost::spirit::chset<CharT>::operator=(const boost::spirit::chlit<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:205: error: ‘detach_clear’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/impl/chset.ipp:205: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘boost::spirit::chset<CharT>& boost::spirit::chset<CharT>::operator=(const boost::spirit::range<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:214: error: ‘detach_clear’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/impl/chset.ipp:214: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘void boost::spirit::chset<CharT>::set(const boost::spirit::range<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:245: error: ‘detach’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/impl/chset.ipp:245: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘void boost::spirit::chset<CharT>::clear(const boost::spirit::range<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:285: error: ‘detach’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/impl/chset.ipp:285: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘void boost::spirit::chset<CharT>::clear(const boost::spirit::negated_char_parser<boost::spirit::range<CharT> >&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:293: error: ‘detach’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/impl/chset.ipp:293: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp:295: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset.ipp:295: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset.ipp:296: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset.ipp:296: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset.ipp:298: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset.ipp:298: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset.ipp:299: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/chset.ipp:299: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘bool boost::spirit::chset<CharT>::test(CharT) const’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:306: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘boost::spirit::chset<CharT>& boost::spirit::chset<CharT>::inverse()’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:312: error: ‘detach’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/impl/chset.ipp:312: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘void boost::spirit::chset<CharT>::swap(boost::spirit::chset<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:320: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘boost::spirit::chset<CharT>& boost::spirit::chset<CharT>::operator|=(const boost::spirit::chset<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:326: error: ‘detach’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/impl/chset.ipp:326: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘boost::spirit::chset<CharT>& boost::spirit::chset<CharT>::operator&=(const boost::spirit::chset<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:335: error: ‘detach’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/impl/chset.ipp:335: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘boost::spirit::chset<CharT>& boost::spirit::chset<CharT>::operator-=(const boost::spirit::chset<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:344: error: ‘detach’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/impl/chset.ipp:344: error: ‘ptr’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/chset.ipp: In member function ‘boost::spirit::chset<CharT>& boost::spirit::chset<CharT>::operator^=(const boost::spirit::chset<CharT>&)’:
+/usr/include/boost/spirit/utility/impl/chset.ipp:353: error: ‘detach’ is not a member of ‘boost::spirit::utility::impl’
+/usr/include/boost/spirit/utility/impl/chset.ipp:353: error: ‘ptr’ was not declared in this scope
+In file included from /usr/include/boost/spirit/utility/escape_char.hpp:21,
+                 from /usr/include/boost/spirit/utility.hpp:29,
+                 from /usr/include/boost/spirit.hpp:63,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/utility/impl/escape_char.ipp: In static member function ‘static typename boost::spirit::parser_result<ParserT, ScannerT>::type boost::spirit::impl::escape_char_action_parse<Flags, CharT>::parse(const ScannerT&, const ParserT&)’:
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:75: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:75: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:114: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:114: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/utility/impl/escape_char.ipp: In static member function ‘static typename boost::spirit::parser_result<ParserT, ScannerT>::type boost::spirit::impl::escape_char_parse<CharT>::parse(const ScannerT&, const ParserT&)’:
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:181: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:181: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:181: error: template argument 4 is invalid
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:181: error: expected initializer before ‘/’ token
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:186: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:186: error: ‘numeric_limits’ is not a member of ‘std’
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:186: error: template argument 4 is invalid
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:186: error: expected initializer before ‘/’ token
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:191: error: ‘oct_parser_t’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:192: error: ‘hex_parser_t’ was not declared in this scope
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:192: error: template argument 2 is invalid
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:192: error: template argument 1 is invalid
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:192: error: template argument 2 is invalid
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:194: error: ‘oct_parser_t’ cannot appear in a constant-expression
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:194: error: template argument 2 is invalid
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:194: error: template argument 1 is invalid
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:194: error: template argument 2 is invalid
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:194: error: template argument 2 is invalid
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:194: error: template argument 2 is invalid
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:195: error: invalid type in declaration before ‘;’ token
+/usr/include/boost/spirit/utility/impl/escape_char.ipp:209: error: request for member ‘parse’ in ‘p’, which is of non-class type ‘parser_t’
+In file included from /usr/include/boost/spirit/utility.hpp:29,
+                 from /usr/include/boost/spirit.hpp:63,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/utility/escape_char.hpp: At global scope:
+/usr/include/boost/spirit/utility/escape_char.hpp:121: error: ‘Flags’ is not a type
+/usr/include/boost/spirit/utility/escape_char.hpp:121: error: expected ‘,’ or ‘...’ before ‘==’ token
+In file included from /usr/include/boost/spirit/utility.hpp:31,
+                 from /usr/include/boost/spirit.hpp:63,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/utility/loops.hpp:267: error: ‘mpl’ has not been declared
+/usr/include/boost/spirit/utility/loops.hpp:267: error: expected unqualified-id before ‘<’ token
+In file included from /usr/include/boost/spirit/utility/impl/confix.ipp:13,
+                 from /usr/include/boost/spirit/utility/confix.hpp:18,
+                 from /usr/include/boost/spirit/utility.hpp:32,
+                 from /usr/include/boost/spirit.hpp:63,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/meta/refactoring.hpp:56: error: expected identifier before ‘(’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:57: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:57: error: expected `)' before ‘<’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:57: error: expected ‘,’ or ‘...’ before ‘<’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:59: error: expected ‘;’ before ‘)’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:139: error: expected identifier before ‘(’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:140: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:140: error: expected `)' before ‘<’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:140: error: expected ‘,’ or ‘...’ before ‘<’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:142: error: expected ‘;’ before ‘)’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:221: error: expected identifier before ‘(’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:222: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:222: error: expected `)' before ‘<’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:222: error: expected ‘,’ or ‘...’ before ‘<’ token
+/usr/include/boost/spirit/meta/refactoring.hpp:224: error: expected ‘;’ before ‘)’ token
+In file included from /usr/include/boost/spirit/utility.hpp:33,
+                 from /usr/include/boost/spirit.hpp:63,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/utility/lists.hpp: In member function ‘boost::spirit::list_parser<typename boost::spirit::as_parser<StartT>::type, typename boost::spirit::as_parser<ExprT>::type, boost::spirit::no_list_endtoken, typename boost::spirit::as_parser<StartT>::type::parser_category_t> boost::spirit::list_parser_gen<CharT>::operator()(const ItemT&, const DelimT&) const’:
+/usr/include/boost/spirit/utility/lists.hpp:218: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/utility/lists.hpp:218: error: template argument 4 is invalid
+/usr/include/boost/spirit/utility/lists.hpp:219: error: invalid type in declaration before ‘;’ token
+/usr/include/boost/spirit/utility/lists.hpp: In member function ‘boost::spirit::list_parser<typename boost::spirit::as_parser<StartT>::type, typename boost::spirit::as_parser<ExprT>::type, typename boost::spirit::as_parser<EndT>::type, typename boost::spirit::as_parser<StartT>::type::parser_category_t> boost::spirit::list_parser_gen<CharT>::operator()(const ItemT&, const DelimT&, const EndT&) const’:
+/usr/include/boost/spirit/utility/lists.hpp:247: error: ‘BOOST_DEDUCED_TYPENAME’ was not declared in this scope
+/usr/include/boost/spirit/utility/lists.hpp:247: error: template argument 4 is invalid
+/usr/include/boost/spirit/utility/lists.hpp:248: error: invalid type in declaration before ‘;’ token
+In file included from /usr/include/boost/spirit/attribute/closure_fwd.hpp:12,
+                 from /usr/include/boost/spirit/attribute/closure.hpp:19,
+                 from /usr/include/boost/spirit/attribute.hpp:36,
+                 from /usr/include/boost/spirit.hpp:70,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/phoenix/tuples.hpp: At global scope:
+/usr/include/boost/spirit/phoenix/tuples.hpp:162: error: ‘boost::remove_reference’ has not been declared
+/usr/include/boost/spirit/phoenix/tuples.hpp:163: error: ‘boost::call_traits’ has not been declared
+/usr/include/boost/spirit/phoenix/tuples.hpp:550: error: ‘length’ has not been declared
+/usr/include/boost/spirit/phoenix/tuples.hpp:576: error: ‘length’ has not been declared
+/usr/include/boost/spirit/phoenix/tuples.hpp:582: error: expected nested-name-specifier before ‘call_traits’
+/usr/include/boost/spirit/phoenix/tuples.hpp:582: error: expected ‘,’ or ‘...’ before ‘<’ token
+/usr/include/boost/spirit/phoenix/tuples.hpp: In constructor ‘phoenix::tuple<A, phoenix::nil_t, phoenix::nil_t, phoenix::nil_t>::tuple(int)’:
+/usr/include/boost/spirit/phoenix/tuples.hpp:583: error: ‘a_’ was not declared in this scope
+/usr/include/boost/spirit/phoenix/tuples.hpp: In constructor ‘phoenix::tuple<A, phoenix::nil_t, phoenix::nil_t, phoenix::nil_t>::tuple(const TupleT&)’:
+/usr/include/boost/spirit/phoenix/tuples.hpp:588: error: ‘length’ was not declared in this scope
+/usr/include/boost/spirit/phoenix/tuples.hpp: At global scope:
+/usr/include/boost/spirit/phoenix/tuples.hpp:616: error: ‘length’ has not been declared
+/usr/include/boost/spirit/phoenix/tuples.hpp:622: error: expected nested-name-specifier before ‘call_traits’
+/usr/include/boost/spirit/phoenix/tuples.hpp:622: error: expected ‘,’ or ‘...’ before ‘<’ token
+/usr/include/boost/spirit/phoenix/tuples.hpp: In constructor ‘phoenix::tuple<A, B, phoenix::nil_t, phoenix::nil_t>::tuple(int)’:
+/usr/include/boost/spirit/phoenix/tuples.hpp:624: error: ‘a_’ was not declared in this scope
+/usr/include/boost/spirit/phoenix/tuples.hpp:624: error: ‘b_’ was not declared in this scope
+/usr/include/boost/spirit/phoenix/tuples.hpp: In constructor ‘phoenix::tuple<A, B, phoenix::nil_t, phoenix::nil_t>::tuple(const TupleT&)’:
+/usr/include/boost/spirit/phoenix/tuples.hpp:629: error: ‘length’ was not declared in this scope
+/usr/include/boost/spirit/phoenix/tuples.hpp: At global scope:
+/usr/include/boost/spirit/phoenix/tuples.hpp:657: error: ‘length’ has not been declared
+/usr/include/boost/spirit/phoenix/tuples.hpp:664: error: expected nested-name-specifier before ‘call_traits’
+/usr/include/boost/spirit/phoenix/tuples.hpp:664: error: expected ‘,’ or ‘...’ before ‘<’ token
+/usr/include/boost/spirit/phoenix/tuples.hpp: In constructor ‘phoenix::tuple<A, B, C, phoenix::nil_t>::tuple(int)’:
+/usr/include/boost/spirit/phoenix/tuples.hpp:667: error: ‘a_’ was not declared in this scope
+/usr/include/boost/spirit/phoenix/tuples.hpp:667: error: ‘b_’ was not declared in this scope
+/usr/include/boost/spirit/phoenix/tuples.hpp:667: error: ‘c_’ was not declared in this scope
+/usr/include/boost/spirit/phoenix/tuples.hpp: In constructor ‘phoenix::tuple<A, B, C, phoenix::nil_t>::tuple(const TupleT&)’:
+/usr/include/boost/spirit/phoenix/tuples.hpp:673: error: ‘length’ was not declared in this scope
+In file included from /usr/include/boost/spirit/phoenix/closures.hpp:14,
+                 from /usr/include/boost/spirit/attribute/closure.hpp:21,
+                 from /usr/include/boost/spirit/attribute.hpp:36,
+                 from /usr/include/boost/spirit.hpp:70,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/phoenix/actor.hpp: At global scope:
+/usr/include/boost/spirit/phoenix/actor.hpp:124: error: expected nested-name-specifier before ‘remove_reference’
+/usr/include/boost/spirit/phoenix/actor.hpp:124: error: expected ‘;’ before ‘<’ token
+In file included from /usr/include/boost/spirit/attribute/closure.hpp:22,
+                 from /usr/include/boost/spirit/attribute.hpp:36,
+                 from /usr/include/boost/spirit.hpp:70,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/phoenix/primitives.hpp:117: error: ‘remove_reference’ in namespace ‘boost’ does not name a type
+/usr/include/boost/spirit/phoenix/primitives.hpp:117: error: expected unqualified-id before ‘<’ token
+/usr/include/boost/spirit/phoenix/primitives.hpp:120: error: expected ‘;’ before ‘const’
+/usr/include/boost/spirit/phoenix/primitives.hpp:122: error: expected `)' before ‘val_’
+/usr/include/boost/spirit/phoenix/primitives.hpp:126: error: expected constructor, destructor, or type conversion before ‘const’
+/usr/include/boost/spirit/phoenix/primitives.hpp:132: error: ‘plain_t’ does not name a type
+In file included from /usr/include/boost/spirit/attribute/closure.hpp:23,
+                 from /usr/include/boost/spirit/attribute.hpp:36,
+                 from /usr/include/boost/spirit.hpp:70,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/phoenix/casts.hpp:37: error: expected constructor, destructor, or type conversion before ‘(’ token
+/usr/include/boost/spirit/phoenix/casts.hpp:40: error: expected constructor, destructor, or type conversion before ‘(’ token
+In file included from /usr/include/boost/spirit/attribute/closure.hpp:24,
+                 from /usr/include/boost/spirit/attribute.hpp:36,
+                 from /usr/include/boost/spirit.hpp:70,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/phoenix/operators.hpp:355: error: ‘INT_MAX’ was not declared in this scope
+/usr/include/boost/spirit/phoenix/operators.hpp:403: error: ‘boost::mpl’ has not been declared
+/usr/include/boost/spirit/phoenix/operators.hpp:403: error: expected unqualified-id before ‘<’ token
+In file included from /usr/include/boost/spirit/attribute/closure.hpp:25,
+                 from /usr/include/boost/spirit/attribute.hpp:36,
+                 from /usr/include/boost/spirit.hpp:70,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/phoenix/tuple_helpers.hpp: In function ‘TupleResultT phoenix::convert_actors(const ActorTupleT&)’:
+/usr/include/boost/spirit/phoenix/tuple_helpers.hpp:511: error: expected primary-expression before ‘int’
+/usr/include/boost/spirit/phoenix/tuple_helpers.hpp:511: error: ‘length’ was not declared in this scope
+/usr/include/boost/spirit/phoenix/tuple_helpers.hpp:512: error: ‘length’ cannot appear in a constant-expression
+/usr/include/boost/spirit/phoenix/tuple_helpers.hpp:512: error: template argument 1 is invalid
+/usr/include/boost/spirit/phoenix/tuple_helpers.hpp:513: error: expected primary-expression before ‘,’ token
+/usr/include/boost/spirit/phoenix/tuple_helpers.hpp:513: error: expected primary-expression before ‘>’ token
+/usr/include/boost/spirit/phoenix/tuple_helpers.hpp:513: error: ‘::do_’ has not been declared
+In file included from /usr/include/boost/spirit/attribute.hpp:36,
+                 from /usr/include/boost/spirit.hpp:70,
+                 from ../../spirit/spiritinclude.h:1,
+                 from GlobalParser.cpp:4:
+/usr/include/boost/spirit/attribute/closure.hpp: At global scope:
+/usr/include/boost/spirit/attribute/closure.hpp:50: error: expected constructor, destructor, or type conversion before ‘(’ token
+/usr/include/boost/spirit/attribute/closure.hpp:51: error: expected constructor, destructor, or type conversion before ‘(’ token
+/usr/include/boost/spirit/core/composite/kleene_star.hpp: In constructor ‘boost::spirit::kleene_star<S>::kleene_star(const S&) [with S = boost::spirit::anychar_parser]’:
+/usr/include/boost/spirit/core/composite/impl/kleene_star.ipp:25:   instantiated from ‘boost::spirit::kleene_star<S> boost::spirit::operator*(const boost::spirit::parser<DerivedT>&) [with S = boost::spirit::anychar_parser]’
+/usr/include/boost/spirit/utility/lists.hpp:174:   instantiated from ‘boost::spirit::list_parser_gen<CharT>::list_parser_gen() [with CharT = char]’
+/usr/include/boost/spirit/utility/lists.hpp:331:   instantiated from here
+/usr/include/boost/spirit/core/composite/kleene_star.hpp:45: error: no matching function for call to ‘boost::spirit::unary<boost::spirit::anychar_parser, boost::spirit::parser<boost::spirit::kleene_star<boost::spirit::anychar_parser> > >::unary(const boost::spirit::anychar_parser&)’
+/usr/include/boost/spirit/core/composite/composite.hpp:62: note: candidates are: boost::spirit::unary<S, BaseT>::unary(const BaseT&, int) [with S = boost::spirit::anychar_parser, BaseT = boost::spirit::parser<boost::spirit::kleene_star<boost::spirit::anychar_parser> >]
+/usr/include/boost/spirit/core/composite/composite.hpp:50: note:                 boost::spirit::unary<boost::spirit::anychar_parser, boost::spirit::parser<boost::spirit::kleene_star<boost::spirit::anychar_parser> > >::unary(const boost::spirit::unary<boost::spirit::anychar_parser, boost::spirit::parser<boost::spirit::kleene_star<boost::spirit::anychar_parser> > >&)
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp: In static member function ‘static boost::spirit::parse_info<IteratorT> boost::spirit::impl::phrase_parser<boost::spirit::space_parser>::parse(const IteratorT&, const IteratorT&, const ParserT&, const boost::spirit::space_parser&) [with IteratorT = const char*, ParserT = GlobalGrammar]’:
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:153:   instantiated from ‘boost::spirit::parse_info<IteratorT> boost::spirit::parse(const IteratorT&, const IteratorT&, const boost::spirit::parser<DerivedT>&, const boost::spirit::parser<SkipT>&) [with IteratorT = const char*, ParserT = GlobalGrammar, SkipT = boost::spirit::space_parser]’
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:171:   instantiated from ‘boost::spirit::parse_info<const CharT*> boost::spirit::parse(const CharT*, const boost::spirit::parser<DerivedT>&, const boost::spirit::parser<SkipT>&) [with CharT = char, ParserT = GlobalGrammar, SkipT = boost::spirit::space_parser]’
+GlobalParser.cpp:400:   instantiated from here
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:130: error: invalid conversion from ‘const char* const’ to ‘int’
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:130: error:   initializing argument 2 of ‘boost::spirit::scanner<IteratorT, PoliciesT>::scanner(IteratorT&, int, const PoliciesT&) [with IteratorT = const char*, PoliciesT = boost::spirit::scanner_policies<boost::spirit::skipper_iteration_policy<boost::spirit::iteration_policy>, boost::spirit::match_policy, boost::spirit::action_policy>]’
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:153:   instantiated from ‘boost::spirit::parse_info<IteratorT> boost::spirit::parse(const IteratorT&, const IteratorT&, const boost::spirit::parser<DerivedT>&, const boost::spirit::parser<SkipT>&) [with IteratorT = const char*, ParserT = GlobalGrammar, SkipT = boost::spirit::space_parser]’
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:171:   instantiated from ‘boost::spirit::parse_info<const CharT*> boost::spirit::parse(const CharT*, const boost::spirit::parser<DerivedT>&, const boost::spirit::parser<SkipT>&) [with CharT = char, ParserT = GlobalGrammar, SkipT = boost::spirit::space_parser]’
+GlobalParser.cpp:400:   instantiated from here
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:131: error: no matching function for call to ‘GlobalGrammar::parse(boost::spirit::impl::phrase_parser<boost::spirit::space_parser>::parse(const IteratorT&, const IteratorT&, const ParserT&, const boost::spirit::space_parser&) [with IteratorT = const char*, ParserT = GlobalGrammar]::scanner_t&) const’
+/usr/include/boost/spirit/core/scanner/scanner.hpp: In constructor ‘boost::spirit::scanner<IteratorT, PoliciesT>::scanner(IteratorT&, int, const PoliciesT&) [with IteratorT = const char*, PoliciesT = boost::spirit::scanner_policies<boost::spirit::skipper_iteration_policy<boost::spirit::iteration_policy>, boost::spirit::match_policy, boost::spirit::action_policy>]’:
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:130:   instantiated from ‘static boost::spirit::parse_info<IteratorT> boost::spirit::impl::phrase_parser<boost::spirit::space_parser>::parse(const IteratorT&, const IteratorT&, const ParserT&, const boost::spirit::space_parser&) [with IteratorT = const char*, ParserT = GlobalGrammar]’
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:153:   instantiated from ‘boost::spirit::parse_info<IteratorT> boost::spirit::parse(const IteratorT&, const IteratorT&, const boost::spirit::parser<DerivedT>&, const boost::spirit::parser<SkipT>&) [with IteratorT = const char*, ParserT = GlobalGrammar, SkipT = boost::spirit::space_parser]’
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:171:   instantiated from ‘boost::spirit::parse_info<const CharT*> boost::spirit::parse(const CharT*, const boost::spirit::parser<DerivedT>&, const boost::spirit::parser<SkipT>&) [with CharT = char, ParserT = GlobalGrammar, SkipT = boost::spirit::space_parser]’
+GlobalParser.cpp:400:   instantiated from here
+/usr/include/boost/spirit/core/scanner/scanner.hpp:231: error: invalid conversion from ‘int’ to ‘const char*’
+/usr/include/boost/spirit/core/scanner/skipper.hpp: In member function ‘void boost::spirit::skipper_iteration_policy<BaseT>::skip(const ScannerT&) const [with ScannerT = boost::spirit::scanner<const char*, boost::spirit::scanner_policies<boost::spirit::skipper_iteration_policy<boost::spirit::iteration_policy>, boost::spirit::match_policy, boost::spirit::action_policy> >, BaseT = boost::spirit::iteration_policy]’:
+/usr/include/boost/spirit/core/scanner/skipper.hpp:51:   instantiated from ‘bool boost::spirit::skipper_iteration_policy<BaseT>::at_end(const ScannerT&) const [with ScannerT = boost::spirit::scanner<const char*, boost::spirit::scanner_policies<boost::spirit::skipper_iteration_policy<boost::spirit::iteration_policy>, boost::spirit::match_policy, boost::spirit::action_policy> >, BaseT = boost::spirit::iteration_policy]’
+/usr/include/boost/spirit/core/scanner/scanner.hpp:246:   instantiated from ‘bool boost::spirit::scanner<IteratorT, PoliciesT>::at_end() const [with IteratorT = const char*, PoliciesT = boost::spirit::scanner_policies<boost::spirit::skipper_iteration_policy<boost::spirit::iteration_policy>, boost::spirit::match_policy, boost::spirit::action_policy>]’
+/usr/include/boost/spirit/core/scanner/scanner.hpp:233:   instantiated from ‘boost::spirit::scanner<IteratorT, PoliciesT>::scanner(IteratorT&, int, const PoliciesT&) [with IteratorT = const char*, PoliciesT = boost::spirit::scanner_policies<boost::spirit::skipper_iteration_policy<boost::spirit::iteration_policy>, boost::spirit::match_policy, boost::spirit::action_policy>]’
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:130:   instantiated from ‘static boost::spirit::parse_info<IteratorT> boost::spirit::impl::phrase_parser<boost::spirit::space_parser>::parse(const IteratorT&, const IteratorT&, const ParserT&, const boost::spirit::space_parser&) [with IteratorT = const char*, ParserT = GlobalGrammar]’
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:153:   instantiated from ‘boost::spirit::parse_info<IteratorT> boost::spirit::parse(const IteratorT&, const IteratorT&, const boost::spirit::parser<DerivedT>&, const boost::spirit::parser<SkipT>&) [with IteratorT = const char*, ParserT = GlobalGrammar, SkipT = boost::spirit::space_parser]’
+/usr/include/boost/spirit/core/scanner/impl/skipper.ipp:171:   instantiated from ‘boost::spirit::parse_info<const CharT*> boost::spirit::parse(const CharT*, const boost::spirit::parser<DerivedT>&, const boost::spirit::parser<SkipT>&) [with CharT = char, ParserT = GlobalGrammar, SkipT = boost::spirit::space_parser]’
+GlobalParser.cpp:400:   instantiated from here
+/usr/include/boost/spirit/core/scanner/skipper.hpp:59: error: no matching function for call to ‘boost::spirit::skipper_iteration_policy<boost::spirit::iteration_policy>::get(const boost::spirit::scanner<const char*, boost::spirit::scanner_policies<boost::spirit::skipper_iteration_policy<boost::spirit::iteration_policy>, boost::spirit::match_policy, boost::spirit::action_policy> >&) const’
+make[1]: *** [GlobalParser.o] Error 1
+make[1]: Leaving directory `/private/arun/fnc/asaha-work/simulator/cli/global'
+make: *** [cliglobal] Error 2
