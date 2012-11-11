@@ -1,5 +1,0 @@
-//
-// Copyright 2009 Arun Saha
-//
-find . -type f -name '*.cpp' | xargs grep -n include | grep -v cli | grep -v mol | grep -v spirit
-find . -type f -name '*.h' | xargs grep -n include | grep -v cli | grep -v mol | grep -v spirit
