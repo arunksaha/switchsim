@@ -1,0 +1,23 @@
+hostname bodie
+!
+ port 0
+  epu 90
+   domain 900
+!
+ port 1
+!
+ port 2
+!
+ port 3
+  epu 25
+!
+ port 4
+  epu 40
+!
+ port 5
+  epu 30
+   domain 900
+!
+ port 6
+!
+ port 7

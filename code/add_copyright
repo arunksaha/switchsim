@@ -1,0 +1,9 @@
+//
+// Copyright 2009 Arun Saha
+//
+for i in `find . -type f | grep -v Make`
+do
+    cp $i tmp
+    cat header > $i
+    cat tmp >> $i
+done
