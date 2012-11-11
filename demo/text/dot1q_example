@@ -1,0 +1,270 @@
+$ ./switchsim 
+/////////////////////////////////////////////////////////
+	 Prototype simulator of basic configuration model.
+	 Type a command or "quit" to exit. or '?' for help.
+/////////////////////////////////////////////////////////
+hostname SoftSwitch
+!
+ port 0
+!
+ port 1
+  epu 11
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+  epu 13
+   ingress match dot1q (vlanid 130)  
+   domain 1300
+!
+ port 2
+  epu 21
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+!
+ port 3
+  epu 31
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+!
+ port 4
+  epu 41
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+  epu 43
+   ingress match dot1q (vlanid 130)  
+   domain 1300
+!
+ port 5
+!
+ port 6
+!
+ port 7
+
+
+SoftSwitch#show ?
+           run        running configuration
+          port        port/interface
+        domain        specify forwarding domain of the ingress frames
+           epu        EVC per UNI
+     mac-table        display mac-address-table i.e. filtering database
+
+SoftSwitch#show run
+hostname SoftSwitch
+!
+ port 0
+!
+ port 1
+  epu 11
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+  epu 13
+   ingress match dot1q (vlanid 130)  
+   domain 1300
+!
+ port 2
+  epu 21
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+!
+ port 3
+  epu 31
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+!
+ port 4
+  epu 41
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+  epu 43
+   ingress match dot1q (vlanid 130)  
+   domain 1300
+!
+ port 5
+!
+ port 6
+!
+ port 7
+
+SoftSwitch#simulation
+
+SoftSwitch(simulation)#port 2 ?
+           da=        destimation MAC address
+
+SoftSwitch(simulation)#port 2 da= 1105 sa= 2105 ?
+        RETURN        press <return>
+        dot1ad        match frames with TPID=0x88a8
+         dot1q        match frames with TPID=0x8100
+
+SoftSwitch(simulation)#port 2 da= 1105 sa= 2105 dot1q ?
+           cos        specify cos value(s)
+             (        specify 'vlanid' followed by values after open parenthesis
+
+SoftSwitch(simulation)#port 2 da= 1105 sa= 2105 dot1q (?
+        vlanid        specify vlan id(s)
+
+SoftSwitch(simulation)#port 2 da= 1105 sa= 2105 dot1q (vlanid ?
+       integer        enter an integer
+
+SoftSwitch(simulation)#port 2 da= 1105 sa= 2105 dot1q (vlanid 111)
+	Ingress Frame at port 2
+		Frame := DA = 1105, SA = 2105, VlanHeader = dot1q (vlanid 111)   [ ... ]
+
+	Ingress Frame did not match any epu
+
+SoftSwitch(simulation)#
+
+SoftSwitch(simulation)#port 2 da= 1105 sa= 2105 dot1q (vlanid 110)
+	Ingress Frame at port 2
+		Frame := DA = 1105, SA = 2105, VlanHeader = dot1q (vlanid 110)   [ ... ]
+
+	1. Frame classfication:
+	 -> Ingress Frame at epu 21
+
+	2. Ingress Frame Rewrite:
+	 -> After ingress rewrite, Frame := DA = 1105, SA = 2105, VlanHeader = dot1q (vlanid 110)   [ ... ]
+
+	3. Frame forwarding: 
+	 -> Forwarding domain = domain 1100
+
+	4. Egress Frame Rewrite:
+	 -> At epu 11 (port = 1), after egress rewrite, Frame := DA = 1105, SA = 2105, VlanHeader = dot1q (vlanid 110)   [ ... ]
+
+	4. Egress Frame Rewrite:
+	 -> At epu 31 (port = 3), after egress rewrite, Frame := DA = 1105, SA = 2105, VlanHeader = dot1q (vlanid 110)   [ ... ]
+
+	4. Egress Frame Rewrite:
+	 -> At epu 41 (port = 4), after egress rewrite, Frame := DA = 1105, SA = 2105, VlanHeader = dot1q (vlanid 110)   [ ... ]
+
+SoftSwitch(simulation)#Note: Flooded
+Syntax ERROR: Input unrecognized.
+
+SoftSwitch(simulation)#end
+
+SoftSwitch#show mac-table
+----------------------------------------------
+Mac Address 		 domain Id 	epu Id 
+----------------------------------------------
+2105 			 1100 		 21
+
+SoftSwitch#simulation
+
+SoftSwitch(simulation)#end
+
+SoftSwitch#show run
+hostname SoftSwitch
+!
+ port 0
+!
+ port 1
+  epu 11
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+  epu 13
+   ingress match dot1q (vlanid 130)  
+   domain 1300
+!
+ port 2
+  epu 21
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+!
+ port 3
+  epu 31
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+!
+ port 4
+  epu 41
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+  epu 43
+   ingress match dot1q (vlanid 130)  
+   domain 1300
+!
+ port 5
+!
+ port 6
+!
+ port 7
+
+SoftSwitch#simulation
+
+SoftSwitch(simulation)#port 1 da= 2105 sa= 1105 ?
+        RETURN        press <return>
+        dot1ad        match frames with TPID=0x88a8
+         dot1q        match frames with TPID=0x8100
+
+SoftSwitch(simulation)#port 1 da= 2105 sa= 1105 dot1q (vlanid 110)
+	Ingress Frame at port 1
+		Frame := DA = 2105, SA = 1105, VlanHeader = dot1q (vlanid 110)   [ ... ]
+
+	1. Frame classfication:
+	 -> Ingress Frame at epu 11
+
+	2. Ingress Frame Rewrite:
+	 -> After ingress rewrite, Frame := DA = 2105, SA = 1105, VlanHeader = dot1q (vlanid 110)   [ ... ]
+
+	3. Frame forwarding: 
+	 -> Forwarding domain = domain 1100
+
+	4. Egress Frame Rewrite:
+	 -> At epu 21 (port = 2), after egress rewrite, Frame := DA = 2105, SA = 1105, VlanHeader = dot1q (vlanid 110)   [ ... ]
+
+SoftSwitch(simulation)#// Note : Learning based forwarding
+Syntax ERROR: Input unrecognized.
+
+SoftSwitch(simulation)#end
+
+SoftSwitch#show mac-table
+----------------------------------------------
+Mac Address 		 domain Id 	epu Id 
+----------------------------------------------
+1105 			 1100 		 11
+2105 			 1100 		 21
+
+SoftSwitch#show domain
+-------------------------------------------------------------------------
+domain Id 	 Type 		 epu Id(s)
+-------------------------------------------------------------------------
+1100		 MP2MP		 11, 21, 31, 41, 
+1300		 P2P  		 13, 43, 
+
+SoftSwitch#simulation
+
+SoftSwitch(simulation)#port 1
+Syntax ERROR: Input unrecognized.
+
+SoftSwitch(simulation)#port 1 da= 1234 sa= 5678 dot1q (vlanid 1300)
+	Ingress Frame at port 1
+		Frame := DA = 1234, SA = 5678, VlanHeader = dot1q (vlanid 1300)   [ ... ]
+
+	Ingress Frame did not match any epu
+
+SoftSwitch(simulation)#port 1 da= 1234 sa= 5678 dot1q (vlanid 130)
+	Ingress Frame at port 1
+		Frame := DA = 1234, SA = 5678, VlanHeader = dot1q (vlanid 130)   [ ... ]
+
+	1. Frame classfication:
+	 -> Ingress Frame at epu 13
+
+	2. Ingress Frame Rewrite:
+	 -> After ingress rewrite, Frame := DA = 1234, SA = 5678, VlanHeader = dot1q (vlanid 130)   [ ... ]
+
+	3. Frame forwarding: 
+	 -> Forwarding domain = domain 1300
+
+	4. Egress Frame Rewrite:
+	 -> At epu 43 (port = 4), after egress rewrite, Frame := DA = 1234, SA = 5678, VlanHeader = dot1q (vlanid 130)   [ ... ]
+
+SoftSwitch(simulation)# // Note: P2P forwarding
+Syntax ERROR: Input unrecognized.
+
+SoftSwitch(simulation)#end
+
+SoftSwitch#show mac-table
+----------------------------------------------
+Mac Address 		 domain Id 	epu Id 
+----------------------------------------------
+1105 			 1100 		 11
+2105 			 1100 		 21
+
+SoftSwitch#^C

@@ -1,0 +1,187 @@
+$  ./switchsim
+/////////////////////////////////////////////////////////
+	 Prototype simulator of basic configuration model.
+	 Type a command or "quit" to exit. or '?' for help.
+/////////////////////////////////////////////////////////
+hostname SoftSwitch
+!
+ port 0
+  epu 0
+   ingress match untagged   
+   domain 42
+!
+ port 1
+  epu 1
+   ingress match untagged   
+   domain 42
+!
+ port 2
+  epu 2
+   ingress match untagged   
+   domain 42
+!
+ port 3
+!
+ port 4
+!
+ port 5
+!
+ port 6
+!
+ port 7
+
+
+SoftSwitch#show run
+hostname SoftSwitch
+!
+ port 0
+  epu 0
+   ingress match untagged   
+   domain 42
+!
+ port 1
+  epu 1
+   ingress match untagged   
+   domain 42
+!
+ port 2
+  epu 2
+   ingress match untagged   
+   domain 42
+!
+ port 3
+!
+ port 4
+!
+ port 5
+!
+ port 6
+!
+ port 7
+
+SoftSwitch#simulator
+Syntax ERROR: Input unrecognized.
+
+SoftSwitch#?
+          show        show something
+        config        configure something
+          save        save current configuration
+      hostname        specify hostname of this device
+    simulation        simulate frame ingress egress behavior
+
+SoftSwitch#simulation
+
+SoftSwitch(simulation)#?
+          exit        exit the current configuration mode
+           end        exit the configuration mode completely
+          port        port/interface
+
+SoftSwitch(simulation)#port ?
+       integer        enter an integer
+
+SoftSwitch(simulation)#port 0 ?
+           da=        destimation MAC address
+
+SoftSwitch(simulation)#port 0 da= ?
+       integer        enter an integer
+
+SoftSwitch(simulation)#port 0 da= 20 ?
+           sa=        source MAC address
+
+SoftSwitch(simulation)#port 0 da= 20 sa= ?
+       integer        enter an integer
+
+SoftSwitch(simulation)#port 0 da= 20 sa= 10 ?
+        RETURN        press <return>
+        dot1ad        match frames with TPID=0x88a8
+         dot1q        match frames with TPID=0x8100
+
+SoftSwitch(simulation)#port 0 da= 20 sa= 10 
+	Ingress Frame at port 0
+		Frame := DA = 20, SA = 10 [ ... ]
+
+	1. Frame classfication:
+	 -> Ingress Frame at epu 0
+
+	2. Ingress Frame Rewrite:
+	 -> After ingress rewrite, Frame := DA = 20, SA = 10 [ ... ]
+
+	3. Frame forwarding: 
+	 -> Forwarding domain = domain 42
+
+	4. Egress Frame Rewrite:
+	 -> At epu 1 (port = 1), after egress rewrite, Frame := DA = 20, SA = 10 [ ... ]
+
+	4. Egress Frame Rewrite:
+	 -> At epu 2 (port = 2), after egress rewrite, Frame := DA = 20, SA = 10 [ ... ]
+
+     // Note: Flooding
+
+SoftSwitch(simulation)#end
+
+SoftSwitch#show mac-table
+----------------------------------------------
+Mac Address 		 domain Id 	epu Id 
+----------------------------------------------
+10 			 42 		 0
+
+SoftSwitch#simulation
+
+SoftSwitch(simulation)#port 1 da= 10 sa= 50
+	Ingress Frame at port 1
+		Frame := DA = 10, SA = 50 [ ... ]
+
+	1. Frame classfication:
+	 -> Ingress Frame at epu 1
+
+	2. Ingress Frame Rewrite:
+	 -> After ingress rewrite, Frame := DA = 10, SA = 50 [ ... ]
+
+	3. Frame forwarding: 
+	 -> Forwarding domain = domain 42
+
+	4. Egress Frame Rewrite:
+	 -> At epu 0 (port = 0), after egress rewrite, Frame := DA = 10, SA = 50 [ ... ]
+
+     // Note: No flooding, forwarding
+
+SoftSwitch(simulation)#end
+
+SoftSwitch#show mac-table
+----------------------------------------------
+Mac Address 		 domain Id 	epu Id 
+----------------------------------------------
+10 			 42 		 0
+50 			 42 		 1
+
+SoftSwitch#simulation
+
+SoftSwitch(simulation)#port 2 da=50 sa= 33
+	Ingress Frame at port 2
+		Frame := DA = 50, SA = 33 [ ... ]
+
+	1. Frame classfication:
+	 -> Ingress Frame at epu 2
+
+	2. Ingress Frame Rewrite:
+	 -> After ingress rewrite, Frame := DA = 50, SA = 33 [ ... ]
+
+	3. Frame forwarding: 
+	 -> Forwarding domain = domain 42
+
+	4. Egress Frame Rewrite:
+	 -> At epu 1 (port = 1), after egress rewrite, Frame := DA = 50, SA = 33 [ ... ]
+
+     // Note: No flooding, forwarding
+
+SoftSwitch(simulation)#end
+
+SoftSwitch#show mac-table
+----------------------------------------------
+Mac Address 		 domain Id 	epu Id 
+----------------------------------------------
+10 			 42 		 0
+33 			 42 		 2
+50 			 42 		 1
+
+SoftSwitch#^C

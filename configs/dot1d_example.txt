@@ -1,0 +1,26 @@
+hostname SoftSwitch
+!
+ port 0
+  epu 0
+   ingress match untagged   
+   domain 42
+!
+ port 1
+  epu 1
+   ingress match untagged   
+   domain 42
+!
+ port 2
+  epu 2
+   ingress match untagged   
+   domain 42
+!
+ port 3
+!
+ port 4
+!
+ port 5
+!
+ port 6
+!
+ port 7

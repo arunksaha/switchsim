@@ -26,7 +26,7 @@ PortParserHandler::parserMain() const
 bool
 PortParserHandler::modifyEpuN ( unsigned epuNumber )
 {
-    cout << " -> " << __PRETTY_FUNCTION__ << ", arg = " << epuNumber << endl;
+    // cout << " -> " << __PRETTY_FUNCTION__ << ", arg = " << epuNumber << endl;
 
 	bool accepted = false;
 
@@ -61,7 +61,7 @@ PortParserHandler::modifyEpuN ( unsigned epuNumber )
 void
 PortParserHandler::deleteEpuN ( unsigned epuNumber )
 {
-    cout << " -> " << __PRETTY_FUNCTION__ << ", arg = " << epuNumber << endl;
+    // ncout << " -> " << __PRETTY_FUNCTION__ << ", arg = " << epuNumber << endl;
 
 	Epu * e = epuMgr()->findEpu( epuNumber );
 

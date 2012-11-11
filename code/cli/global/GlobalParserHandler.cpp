@@ -27,7 +27,7 @@ GlobalParserHandler::showRun()
 void
 GlobalParserHandler::showPorts( const unsigned x, const bool b )
 {
-    cout << " -> " << __PRETTY_FUNCTION__ << ", arg = " << x << ", " << b << endl;
+    // cout << " -> " << __PRETTY_FUNCTION__ << ", arg = " << x << ", " << b << endl;
     portMgr()->showPorts( x, b );
 }
 

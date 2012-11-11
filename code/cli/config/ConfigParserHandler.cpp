@@ -17,13 +17,13 @@ ConfigParserHandler::~ConfigParserHandler()
 void
 ConfigParserHandler::modifyPortN( PortId pId ) const
 {
-    cout << " -> " << __PRETTY_FUNCTION__ << ", arg = " << pId << endl;
+    // cout << " -> " << __PRETTY_FUNCTION__ << ", arg = " << pId << endl;
 }
 
 bool
 ConfigParserHandler::validPortId( PortId pId ) const
 {
-    cout << " -> " << __PRETTY_FUNCTION__ << ", arg = " << pId << endl;
+    // cout << " -> " << __PRETTY_FUNCTION__ << ", arg = " << pId << endl;
 
     const unsigned n = portMgr()->numPorts();
     if( pId < n )

@@ -1,0 +1,222 @@
+$ ./switchsim 
+/////////////////////////////////////////////////////////
+	 Prototype simulator of basic configuration model.
+	 Type a command or "quit" to exit. or '?' for help.
+/////////////////////////////////////////////////////////
+hostname SoftSwitch
+!
+ port 0
+!
+ port 1
+  epu 11
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+  epu 13
+   ingress match dot1q (vlanid 130)  
+   domain 1300
+!
+ port 2
+!
+ port 3
+!
+ port 4
+!
+ port 5
+!
+ port 6
+!
+ port 7
+
+
+SoftSwitch#config
+
+SoftSwitch(config)#port 2
+
+SoftSwitch(config-port)#epu 21
+
+SoftSwitch(config-port-epu)#?
+          exit        exit the current configuration mode
+           end        exit the configuration mode completely
+      shutdown        shutdown current configuration object
+       ingress        specify action for incoming frames
+        egress        specify action for outgoing frames
+        domain        specify forwarding domain of the ingress frames
+
+SoftSwitch(config-port-epu)#ingress ?
+         match        specify match criteria: which ingress frames at the container port are mapped to this?
+       rewrite        specify VLAN tag translation rules
+
+SoftSwitch(config-port-epu)#ingress match ?
+      untagged        match untagged frames
+        dot1ad        match frames with TPID=0x88a8
+         dot1q        match frames with TPID=0x8100
+
+SoftSwitch(config-port-epu)#ingress match dot1q ?
+           cos        specify cos value(s)
+             (        specify 'vlanid' followed by values after open parenthesis
+
+SoftSwitch(config-port-epu)#ingress match dot1q (?
+        vlanid        specify vlan id(s)
+       ptagged        match priority-tagged frames
+
+SoftSwitch(config-port-epu)#ingress match dot1q (vlanid ?
+   number-list        single number, or comma separated list of number(s) or ranges(s), e.g. 10,20-30,40
+
+SoftSwitch(config-port-epu)#ingress match dot1q (vlanid 110?
+             )        end 'vlanid' value list with close parenthesis
+
+SoftSwitch(config-port-epu)#ingress match dot1q (vlanid 110)
+
+SoftSwitch(config-port-epu)#domain 1100
+
+SoftSwitch(config-port-epu)#exit
+
+SoftSwitch(config-port)#exit
+
+SoftSwitch(config)#exit
+
+SoftSwitch#show run
+hostname SoftSwitch
+!
+ port 0
+!
+ port 1
+  epu 11
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+  epu 13
+   ingress match dot1q (vlanid 130)  
+   domain 1300
+!
+ port 2
+  epu 21
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+!
+ port 3
+!
+ port 4
+!
+ port 5
+!
+ port 6
+!
+ port 7
+
+SoftSwitch#save
+
+SoftSwitch#^C
+
+$ ./switchsim 
+/////////////////////////////////////////////////////////
+	 Prototype simulator of basic configuration model.
+	 Type a command or "quit" to exit. or '?' for help.
+/////////////////////////////////////////////////////////
+hostname SoftSwitch
+!
+ port 0
+!
+ port 1
+  epu 11
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+  epu 13
+   ingress match dot1q (vlanid 130)  
+   domain 1300
+!
+ port 2
+  epu 21
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+!
+ port 3
+!
+ port 4
+!
+ port 5
+!
+ port 6
+!
+ port 7
+
+
+SoftSwitch#show ?
+           run        running configuration
+          port        port/interface
+        domain        specify forwarding domain of the ingress frames
+           epu        EVC per UNI
+     mac-table        display mac-address-table i.e. filtering database
+
+SoftSwitch#show run
+hostname SoftSwitch
+!
+ port 0
+!
+ port 1
+  epu 11
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+  epu 13
+   ingress match dot1q (vlanid 130)  
+   domain 1300
+!
+ port 2
+  epu 21
+   ingress match dot1q (vlanid 110)  
+   domain 1100
+!
+ port 3
+!
+ port 4
+!
+ port 5
+!
+ port 6
+!
+ port 7
+
+SoftSwitch#show ?
+           run        running configuration
+          port        port/interface
+        domain        specify forwarding domain of the ingress frames
+           epu        EVC per UNI
+     mac-table        display mac-address-table i.e. filtering database
+
+SoftSwitch#show port
+-------------------------------------------------------------------------
+port Id 	 epu member Id(s)
+-------------------------------------------------------------------------
+1 		 11,13,
+2 		 21,
+
+SoftSwitch#show ?
+           run        running configuration
+          port        port/interface
+        domain        specify forwarding domain of the ingress frames
+           epu        EVC per UNI
+     mac-table        display mac-address-table i.e. filtering database
+
+SoftSwitch#show domain
+-------------------------------------------------------------------------
+domain Id 	 Type 		 epu Id(s)
+-------------------------------------------------------------------------
+1100		 P2P  		 11, 21, 
+1300		 -    		 13, 
+
+SoftSwitch#show epu
+------------------------------------------------------------------------------
+epu Id 		 port Id 	 domain Id
+------------------------------------------------------------------------------
+11 		 1 		 1100
+13 		 1 		 1300
+21 		 2 		 1100
+
+SoftSwitch#show mac-table
+----------------------------------------------
+Mac Address 		 domain Id 	epu Id 
+----------------------------------------------
+
+SoftSwitch#^C
+]0;arun@sahas-amd: /private/arun/code/switchsim/codearun@sahas-amd:/private/arun/code/switchsim/code$ exit
+
+Script done on Sat 10 Nov 2012 09:57:40 PM PST
