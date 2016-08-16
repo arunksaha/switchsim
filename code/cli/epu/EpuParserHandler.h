@@ -10,23 +10,20 @@
 #include <mol/epu/EpuMgr.h>
 
 class EpuParserHandler {
+ public:
+  EpuParserHandler();
+  ~EpuParserHandler();
 
-  public:
+  void epuAdminStateCfg(bool) const;
+  void epuFdIdCfg(FwdDomainId const &) const;
+  void epuMatchCfg(EpuMatchCriteria const &) const;
+  void epuIngressRewriteCfg(EpuRewriteOp const &) const;
+  void epuEgressRewriteCfg(EpuRewriteOp const &) const;
 
-  	EpuParserHandler();
-  	~EpuParserHandler();
+  void epuParser(string const &, bool &, ConfigState &);
 
-	void epuAdminStateCfg( bool ) const;
-	void epuFdIdCfg( FwdDomainId const & ) const;
-	void epuMatchCfg( EpuMatchCriteria const & ) const;
-	void epuIngressRewriteCfg( EpuRewriteOp const & ) const;
-	void epuEgressRewriteCfg( EpuRewriteOp const & ) const;
-
-	void epuParser( string const &, bool &, ConfigState & );
-
-  private:
-
-	ParserMain 		* parserMain() const;
+ private:
+  ParserMain *parserMain() const;
 };
 
 #endif

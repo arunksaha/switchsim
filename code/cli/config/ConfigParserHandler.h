@@ -5,23 +5,20 @@
 #define CLI_CONFIGPARSERHANDLER_H
 
 #include <cli/main/ParserMain.h>
-#include <mol/common/Types.h>
 #include <mol/common/MolVp.h>
+#include <mol/common/Types.h>
 
 class ConfigParserHandler {
+ public:
+  ConfigParserHandler();
+  ~ConfigParserHandler();
 
-  public: 
+  void modifyPortN(PortId) const;
 
-	ConfigParserHandler();
-	~ConfigParserHandler();
+  bool validPortId(PortId) const;
 
-	void modifyPortN( PortId ) const;
-
-    bool validPortId( PortId ) const;
-
-  private:
-
-	ParserMain 		* parserMain() const;
+ private:
+  ParserMain* parserMain() const;
 };
 
 #endif

@@ -7,23 +7,20 @@
 #include <cli/main/ParserMain.h>
 
 #include <mol/common/MolVp.h>
-#include <mol/epu/EpuMgr.h>
 #include <mol/epu/Epu.h>
+#include <mol/epu/EpuMgr.h>
 
 class PortParserHandler {
+ public:
+  PortParserHandler();
+  ~PortParserHandler();
 
-  public:
-	PortParserHandler(); 
-	~PortParserHandler(); 
+  bool modifyEpuN(unsigned);
 
-	bool modifyEpuN( unsigned );
+  void deleteEpuN(unsigned);
 
-	void deleteEpuN( unsigned );
-
-  private:
-
-	ParserMain 		* parserMain() const;
+ private:
+  ParserMain* parserMain() const;
 };
 
 #endif
-

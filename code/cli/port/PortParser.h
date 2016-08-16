@@ -8,25 +8,21 @@
 #include <cli/port/PortParserHandler.h>
 
 class PortParser {
+ public:
+  PortParser();
+  ~PortParser();
+  void molVp(MolVp *);
 
-  public:
+  // EpuMgr * epuMgr() const;
 
-	PortParser();
-	~PortParser();
-	void molVp( MolVp * );
-
-	// EpuMgr * epuMgr() const;
-
-	void portParser( string const &, bool &, ConfigState * );
+  void portParser(string const &, bool &, ConfigState *);
 
   // private:
 
-	PortParser( PortParser const & );
-    PortParser & operator=( PortParser const & );
+  PortParser(PortParser const &);
+  PortParser &operator=(PortParser const &);
 
-	PortParserHandler		* pph_;
-
-  	
+  PortParserHandler *pph_;
 };
 
 #endif

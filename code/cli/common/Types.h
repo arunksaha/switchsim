@@ -5,55 +5,50 @@
 #define CLI_COMMON_TYPES_H
 
 #include <assert.h>
+#include <fstream>
 #include <iostream>
 #include <ostream>
-#include <fstream>
-#include <vector>
 #include <string>
+#include <vector>
 
 ///////////////////////////////////////////////////////////////////
 typedef unsigned Counter;
 
 ///////////////////////////////////////////////////////////////////
 class NumberTuple {
-
-  public:
-
-    NumberTuple();
-    std::ostream & dump( std::ostream & ) const;
+ public:
+  NumberTuple();
+  std::ostream &dump(std::ostream &) const;
 
   // private:
 
-    unsigned short lower_;
-    unsigned short upper_;
+  unsigned short lower_;
+  unsigned short upper_;
 };
 
-typedef std::vector< NumberTuple > NumberTupleVector;
-typedef std::vector< NumberTuple >::const_iterator
-    NumberTupleVectorConstItr;
+typedef std::vector<NumberTuple>                 NumberTupleVector;
+typedef std::vector<NumberTuple>::const_iterator NumberTupleVectorConstItr;
 
-std::ostream & operator<<( std::ostream &, NumberTuple const & );
+std::ostream &operator<<(std::ostream &, NumberTuple const &);
 
 ///////////////////////////////////////////////////////////////////
 class NumberList {
+ public:
+  NumberList();
+  NumberList &operator=(NumberList const &);
 
-  public:
- 
-    NumberList();
-    NumberList & operator=( NumberList const & );
+  void          clear();
+  std::ostream &dump(std::ostream &) const;
 
-    void clear();
-    std::ostream & dump( std::ostream & ) const;
-
-    void insertEntry( NumberTuple const & );
-    bool empty() const;
-    bool contains( unsigned const ) const;
+  void insertEntry(NumberTuple const &);
+  bool empty() const;
+  bool contains(unsigned const) const;
 
   // private:
 
-    NumberTupleVector numberTupleVector_;
+  NumberTupleVector numberTupleVector_;
 };
 
-std::ostream & operator<<( std::ostream &, NumberList const & );
+std::ostream &operator<<(std::ostream &, NumberList const &);
 
 #endif

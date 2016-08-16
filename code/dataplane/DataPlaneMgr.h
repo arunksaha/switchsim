@@ -7,16 +7,14 @@
 #include <cli/common/Frame.h>
 
 class DataPlaneMgr {
+ public:
+  DataPlaneMgr();
+  ~DataPlaneMgr();
 
-  public:
-
-    DataPlaneMgr();
-    ~DataPlaneMgr();
-
-    void processFrame( PortId, Frame & );
-    void epuTransmit( Epu const *, Frame );   // The 'frame' should not be reference
+  void processFrame(PortId, Frame &);
+  void epuTransmit(Epu const *, Frame);  // The 'frame' should not be reference
 };
 
-DataPlaneMgr * dataPlaneMgr();
+DataPlaneMgr *dataPlaneMgr();
 
 #endif

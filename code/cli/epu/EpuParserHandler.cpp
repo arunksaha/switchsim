@@ -5,81 +5,68 @@
 
 #include <mol/epu/Epu.h>
 
-extern ParserMain * MyParserMain_;
+extern ParserMain* MyParserMain_;
 
-EpuParserHandler::EpuParserHandler()
-{
+EpuParserHandler::EpuParserHandler() {}
+
+EpuParserHandler::~EpuParserHandler() {}
+
+ParserMain* EpuParserHandler::parserMain() const {
+  assert(MyParserMain_);
+  return (MyParserMain_);
 }
 
-EpuParserHandler::~EpuParserHandler()
-{
+void EpuParserHandler::epuAdminStateCfg(bool x) const {
+  EpuId eid = MyParserMain_->configState()->currEpuId_;
+  // cout << " -> " << __PRETTY_FUNCTION__ << ", Epu Id = " << eid << ", param =
+  // " << x << endl;
+
+  Epu* e = epuMgr()->findEpu(eid);
+  assert(e);
+
+  e->adminState(x);
 }
 
-ParserMain *
-EpuParserHandler::parserMain() const
-{
-	assert( MyParserMain_ );
-	return( MyParserMain_ );
+void EpuParserHandler::epuFdIdCfg(FwdDomainId const& x) const {
+  EpuId eid = MyParserMain_->configState()->currEpuId_;
+  // cout << " -> " << __PRETTY_FUNCTION__ << ", Epu Id = " << eid << ", param =
+  // " << x << endl;
 
+  Epu* e = epuMgr()->findEpu(eid);
+  assert(e);
+
+  e->fdId(x);
 }
 
-void
-EpuParserHandler::epuAdminStateCfg( bool x ) const
-{
-	EpuId eid = MyParserMain_->configState()->currEpuId_;
-	// cout << " -> " << __PRETTY_FUNCTION__ << ", Epu Id = " << eid << ", param = " << x << endl;
+void EpuParserHandler::epuMatchCfg(EpuMatchCriteria const& x) const {
+  EpuId eid = MyParserMain_->configState()->currEpuId_;
+  // cout << " -> " << __PRETTY_FUNCTION__ << ", Epu Id = " << eid << ", param =
+  // " << x << endl;
 
-	Epu * e = epuMgr()->findEpu( eid );
-	assert( e );
+  Epu* e = epuMgr()->findEpu(eid);
+  assert(e);
 
-	e->adminState( x );
+  e->ingressMatch(x);
 }
 
-void
-EpuParserHandler::epuFdIdCfg( FwdDomainId const & x ) const
-{
-	EpuId eid = MyParserMain_->configState()->currEpuId_;
-	// cout << " -> " << __PRETTY_FUNCTION__ << ", Epu Id = " << eid << ", param = " << x << endl;
+void EpuParserHandler::epuIngressRewriteCfg(EpuRewriteOp const& x) const {
+  EpuId eid = MyParserMain_->configState()->currEpuId_;
+  // cout << " -> " << __PRETTY_FUNCTION__ << ", Epu Id = " << eid << ", param =
+  // " << x << endl;
 
-	Epu * e = epuMgr()->findEpu( eid );
-	assert( e );
+  Epu* e = epuMgr()->findEpu(eid);
+  assert(e);
 
-	e->fdId( x );
+  e->ingressRewrite(x);
 }
 
-void
-EpuParserHandler::epuMatchCfg( EpuMatchCriteria const & x ) const
-{
-	EpuId eid = MyParserMain_->configState()->currEpuId_;
-	// cout << " -> " << __PRETTY_FUNCTION__ << ", Epu Id = " << eid << ", param = " << x << endl;
+void EpuParserHandler::epuEgressRewriteCfg(EpuRewriteOp const& x) const {
+  EpuId eid = MyParserMain_->configState()->currEpuId_;
+  // cout << " -> " << __PRETTY_FUNCTION__ << ", Epu Id = " << eid << ", param =
+  // " << x << endl;
 
-	Epu * e = epuMgr()->findEpu( eid );
-	assert( e );
+  Epu* e = epuMgr()->findEpu(eid);
+  assert(e);
 
-	e->ingressMatch( x );
+  e->egressRewrite(x);
 }
-
-void
-EpuParserHandler::epuIngressRewriteCfg( EpuRewriteOp const & x ) const
-{
-	EpuId eid = MyParserMain_->configState()->currEpuId_;
-	// cout << " -> " << __PRETTY_FUNCTION__ << ", Epu Id = " << eid << ", param = " << x << endl;
-
-	Epu * e = epuMgr()->findEpu( eid );
-	assert( e );
-
-	e->ingressRewrite( x );
-}
-
-void
-EpuParserHandler::epuEgressRewriteCfg( EpuRewriteOp const & x ) const
-{
-	EpuId eid = MyParserMain_->configState()->currEpuId_;
-	// cout << " -> " << __PRETTY_FUNCTION__ << ", Epu Id = " << eid << ", param = " << x << endl;
-
-	Epu * e = epuMgr()->findEpu( eid );
-	assert( e );
-
-	e->egressRewrite( x );
-}
-

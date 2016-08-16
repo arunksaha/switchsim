@@ -5,10 +5,7 @@
 #define METADATA_H
 
 class MetaData {
-
-  public:
-
-    
+ public:
 };
 
 #endif

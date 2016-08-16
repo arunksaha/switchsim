@@ -4,25 +4,24 @@
 #ifndef CLI_GLOBALPARSER_H
 #define CLI_GLOBALPARSER_H
 
-#include <cli/main/ParserMain.h>
 #include <cli/global/GlobalParserHandler.h>
+#include <cli/main/ParserMain.h>
 
 class GlobalParser {
+ public:
+  GlobalParser();
+  ~GlobalParser();
 
-  public:
-	GlobalParser();
-	~GlobalParser();
+  ParserMain *parserMain() const;
 
-	ParserMain * parserMain() const;
-
-	void globalParser( string const &, bool &, ConfigState * );
+  void globalParser(string const &, bool &, ConfigState *);
 
   // private:
 
-	GlobalParser( GlobalParser const & );
-    GlobalParser & operator=( GlobalParser const & );
+  GlobalParser(GlobalParser const &);
+  GlobalParser &operator=(GlobalParser const &);
 
-	GlobalParserHandler		* gph_;
+  GlobalParserHandler *gph_;
 };
 
 #endif

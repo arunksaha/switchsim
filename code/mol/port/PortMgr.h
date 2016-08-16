@@ -8,32 +8,28 @@
 #include <mol/port/Port.h>
 
 class PortMgr {
+ public:
+  PortMgr();
+  ~PortMgr();
 
-  public:
-  	
-	PortMgr();
-	~PortMgr();
+  void showRun(ostream &) const;
+  void showPorts(PortId const &, bool const &) const;
 
-	void showRun( ostream & ) const;
-    void showPorts( PortId const &, bool const & ) const;
+  unsigned numPorts() const;
 
-    unsigned            numPorts() const;
+  Port *port(PortId const &) const;
 
-	Port * port( PortId const & ) const;
+ private:
+  PortMgr(PortMgr const &);
+  PortMgr &operator=(PortMgr const &);
 
-  private:
+  enum { MaxPorts = 8 };
 
-    PortMgr( PortMgr const & );
-    PortMgr & operator=( PortMgr const & );
+  void dumpHeader(bool const &) const;
+  void dumpPort(Port const *) const;
 
-  	enum { MaxPorts = 8 };
-
-    void dumpHeader( bool const & ) const;
-    void dumpPort( Port const * ) const;
-
-  	unsigned			numPorts_;
-	Port 				** port_;
+  unsigned numPorts_;
+  Port **  port_;
 };
-
 
 #endif

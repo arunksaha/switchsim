@@ -13,181 +13,152 @@ class Fcs;
 
 /////////////////////////////////////////////////////////////////////
 
-enum VlanType {
-	VlanTypeNull = 0,
-	VlanTypeDot1q,
-	VlanTypeDot1ad
-};
+enum VlanType { VlanTypeNull = 0, VlanTypeDot1q, VlanTypeDot1ad };
 
-std::string VlanTypeToString( VlanType );
+std::string VlanTypeToString(VlanType);
 
 enum EtherType {
-    EtherTypeIpv4 = 0x0800,
-    EtherTypeDot1q = 0x8100,
-    EtherTypeDot1ad = 0x88A8
+  EtherTypeIpv4   = 0x0800,
+  EtherTypeDot1q  = 0x8100,
+  EtherTypeDot1ad = 0x88A8
 };
 
-enum FrameType {
-    Untagged = 0,
-    SingleTagged,
-    DoubleTagged,
-    FrameTypeUnknown
-};
+enum FrameType { Untagged = 0, SingleTagged, DoubleTagged, FrameTypeUnknown };
 
 /////////////////////////////////////////////////////////////////////
 class MacAddr {
+ public:
+  MacAddr();
+  ~MacAddr();
+  MacAddr(unsigned long int);
 
-  public:
+  bool operator==(MacAddr const &) const;
+  bool operator!=(MacAddr const &) const;
+  bool operator<(MacAddr const &) const;
 
-    MacAddr();
-    ~MacAddr();
-    MacAddr( unsigned long int );
+  bool unicastAddr() const;
+  bool multicastAddr() const;
 
-    bool operator==( MacAddr const & ) const;
-    bool operator!=( MacAddr const & ) const;
-    bool operator< ( MacAddr const & ) const;
+  void          clear();
+  std::ostream &dump(std::ostream &) const;
 
-    bool unicastAddr() const;
-    bool multicastAddr() const;
-
-    void clear();
-    std::ostream & dump( std::ostream & ) const;
-
-  private:
-
-    unsigned long int addr_;
+ private:
+  unsigned long int addr_;
 };
 
-std::ostream & operator<<( std::ostream &, MacAddr const & );
+std::ostream &operator<<(std::ostream &, MacAddr const &);
 
 /////////////////////////////////////////////////////////////////////
 class VlanTag {
+ public:
+  VlanTag();
 
-  public:
+  void          clear();
+  std::ostream &dump(std::ostream &) const;
 
-    VlanTag();
-
-    void clear();
-    std::ostream & dump( std::ostream & ) const;
-
-    std::string toString() const;
-
-  // private: 
-
-    enum { DefaultCosValue = 0xFFFF, DefaultVlanIdValue = 0xFFFF };
-
-	VlanType		vlanType_;
-  	unsigned short	cosValue_;
-	unsigned short	vlanidValue_;
-};
-
-std::ostream & operator<<( std::ostream &, VlanTag const & );
-
-/////////////////////////////////////////////////////////////////////
-class VlanHeader {
-
-  public:
-
-    VlanHeader();
-
-    void clear();
-    std::ostream & dump( std::ostream & ) const;
-
-    unsigned    numVlanTags() const;
-
-    bool        contains( VlanHeader const &, signed & );
+  std::string toString() const;
 
   // private:
 
-    enum { MaxVlanTags = 2 };
+  enum { DefaultCosValue = 0xFFFF, DefaultVlanIdValue = 0xFFFF };
 
-    VlanTag tag_[ 2 ];
+  VlanType       vlanType_;
+  unsigned short cosValue_;
+  unsigned short vlanidValue_;
 };
 
-std::ostream & operator<<( std::ostream &, VlanHeader const & );
+std::ostream &operator<<(std::ostream &, VlanTag const &);
+
+/////////////////////////////////////////////////////////////////////
+class VlanHeader {
+ public:
+  VlanHeader();
+
+  void          clear();
+  std::ostream &dump(std::ostream &) const;
+
+  unsigned numVlanTags() const;
+
+  bool contains(VlanHeader const &, signed &);
+
+  // private:
+
+  enum { MaxVlanTags = 2 };
+
+  VlanTag tag_[2];
+};
+
+std::ostream &operator<<(std::ostream &, VlanHeader const &);
 
 /////////////////////////////////////////////////////////////////////
 class Payload {
+ public:
+  Payload() : contents_("DummyPayload") {}
 
-  public:
+  std::ostream &dump(std::ostream &o) const {
+    o << contents_;
+    return o;
+  }
 
-    Payload() 
-     : contents_ ( "DummyPayload" )
-    {
-    }
-
-    std::ostream & dump( std::ostream & o ) const {
-        o << contents_;
-        return o;
-    }
-
-  private:
-    std::string      contents_;
+ private:
+  std::string contents_;
 };
 
-std::ostream & operator<<( std::ostream &, Payload const & );
+std::ostream &operator<<(std::ostream &, Payload const &);
 
 /////////////////////////////////////////////////////////////////////
 class Fcs {
+ public:
+  Fcs() : contents_("DummyFcs") {}
 
-  public:
+  std::ostream &dump(std::ostream &o) const {
+    o << contents_;
+    return o;
+  }
 
-    Fcs() 
-     : contents_( "DummyFcs" )
-    {
-    }
-
-    std::ostream & dump( std::ostream & o ) const {
-        o << contents_;
-        return o;
-    }
-
-  private:
-    std::string      contents_;
+ private:
+  std::string contents_;
 };
 
-std::ostream & operator<<( std::ostream &, Fcs const & );
+std::ostream &operator<<(std::ostream &, Fcs const &);
 
 /////////////////////////////////////////////////////////////////////
 class Frame {
+ public:
+  Frame();
+  ~Frame();
 
-  public:
+  void          clear();
+  std::ostream &dump(std::ostream &) const;
 
-    Frame();
-    ~Frame();
+  FrameType frameType() const;
 
-    void clear();
-    std::ostream & dump( std::ostream & ) const;
+  MacAddr dstAddr() const;
+  void    dstAddr(MacAddr const &);
 
-    FrameType       frameType() const;
+  MacAddr srcAddr() const;
+  void    srcAddr(MacAddr const &);
 
-    MacAddr         dstAddr() const;
-    void            dstAddr( MacAddr const & );
+  unsigned          numVlanTags() const;
+  VlanHeader &      vlanHeader();
+  VlanHeader const &vlanHeader() const;
+  void              vlanHeader(VlanHeader const &);
 
-    MacAddr         srcAddr() const;
-    void            srcAddr( MacAddr const & );
+  Payload payload() const;
+  void    payload(Payload const &);
 
-    unsigned        numVlanTags() const;
-    VlanHeader &    vlanHeader();
-    VlanHeader const &    vlanHeader() const;
-    void            vlanHeader( VlanHeader const & );
+  Fcs  fcs() const;
+  void fcs(Fcs const &);
 
-    Payload         payload() const;
-    void            payload( Payload const & );
-
-    Fcs             fcs() const;
-    void            fcs( Fcs const & );
-
-  private:
-
-    MacAddr        da_;
-    MacAddr        sa_;
-    VlanHeader     vlanHeader_;
-    EtherType      frameEtherType_;
-    Payload        payload_;
-    Fcs            fcs_;
+ private:
+  MacAddr    da_;
+  MacAddr    sa_;
+  VlanHeader vlanHeader_;
+  EtherType  frameEtherType_;
+  Payload    payload_;
+  Fcs        fcs_;
 };
 
-std::ostream & operator<<( std::ostream &, Frame const & );
+std::ostream &operator<<(std::ostream &, Frame const &);
 
 #endif

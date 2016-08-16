@@ -8,21 +8,19 @@
 #include <cli/simul/SimulParserHandler.h>
 
 class SimulParser {
+ public:
+  SimulParser();
+  ~SimulParser();
+  void molVp(MolVp *);
 
-  public:
-	SimulParser();
-	~SimulParser();
-	void molVp( MolVp * );
-
-	void simulParser( string const &, bool &, ConfigState * );
+  void simulParser(string const &, bool &, ConfigState *);
 
   // private:
 
-	SimulParser( SimulParser const & );
-    SimulParser & operator=( SimulParser const & );
+  SimulParser(SimulParser const &);
+  SimulParser &operator=(SimulParser const &);
 
-	SimulParserHandler		* sph_;
-  	
+  SimulParserHandler *sph_;
 };
 
 #endif

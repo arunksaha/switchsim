@@ -7,41 +7,38 @@
 #include <mol/common/Types.h>
 #include <mol/epu/Epu.h>
 
-typedef std::vector< Epu * > EpuList;
-typedef std::vector< Epu * >::iterator EpuListItr;
-typedef std::vector< Epu * >::const_iterator EpuListConstItr;
+typedef std::vector<Epu*>                 EpuList;
+typedef std::vector<Epu*>::iterator       EpuListItr;
+typedef std::vector<Epu*>::const_iterator EpuListConstItr;
 
 class Port {
+ public:
+  Port();
+  ~Port();
 
-  public:
-  	
-	Port();
-	~Port();
+  void addEpu(Epu*);
+  void removeEpu(Epu*);
 
-	void        addEpu( Epu * );
-	void        removeEpu( Epu * );
+  void showRun(std::ostream& os) const;
 
-	void        showRun( std::ostream & os ) const;
+  Counter inFrames() const;
+  void    incrInFrames();
 
-    Counter     inFrames() const;
-    void        incrInFrames();
+  Counter outFrames() const;
+  void    incrOutFrames();
 
-    Counter     outFrames() const;
-    void        incrOutFrames();
+  Epu const* ingressMatchClassify(Frame const&);
 
-    Epu const * ingressMatchClassify( Frame const & );
+ private:
+  friend class PortMgr;
 
-  private:
+  void dump(bool const&) const;
 
-	friend class PortMgr;
+  PortId  id_;
+  EpuList epuList_;
 
-    void dump( bool const & ) const;
-
-	PortId      id_;
-	EpuList     epuList_;
-
-    Counter     inFrames_;
-    Counter     outFrames_;
+  Counter inFrames_;
+  Counter outFrames_;
 };
 
 #endif
